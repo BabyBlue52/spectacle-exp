@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 2px solid $flame;
+    width: 100%;
+    .content {
+        width: 500px;
+        border: 2px solid $flame;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+        font-size: $headline;
+    }
+    h4 {
+        margin: 0;
+        font-size: $medium;
+    }
+}
