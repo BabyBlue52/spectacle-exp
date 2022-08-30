@@ -22,4 +22,9 @@ p {
     width: calc(100vw - 80px);
     border: 2px solid $flame;
 }
-
+.circle-text-animation {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    height: 200px;
+}
