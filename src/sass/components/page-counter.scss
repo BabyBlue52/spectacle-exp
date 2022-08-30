@@ -1,0 +1,26 @@
+.page-counter {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    right: 50px;
+    width: max-content;
+    padding: 5px 20px 0px 10px;
+    font-family: $rosignBold, sans-serif;
+    p.page-max {
+      margin-right: -10px;
+      font-size: 26px;
+      font-family: inherit;
+      letter-spacing: 10px;
+    }
+    span.slash {
+      margin-left: 5px;
+    }
+    section {
+      position: relative;
+      top: -1px;
+      span {
+        perspective: 360px !important;
+        transform: scale(1.1); 
+      }
+    }
+  }
