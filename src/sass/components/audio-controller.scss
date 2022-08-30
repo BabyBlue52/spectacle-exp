@@ -11,7 +11,7 @@
     padding: 5px 20px;
     border-radius: 40px;
     background: $manila;
-    cursor: pointer;
+    cursor: pointer !important;
     .mute, .play-pause, .replay {
       margin-top: 8.5px;
       margin-right: 10px;
