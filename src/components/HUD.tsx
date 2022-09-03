@@ -3,11 +3,11 @@ import Header from './Header';
 import AudioPlayer from './AudioPlayer';
 import CircleText from './CircleText';
 import PageCounter from './PageCounter';
-import CursorTracker from './CursorTracker';
+
 
 function HUD() {
   return (
-    <div className='wrapper'>
+    <div className='hud wrapper _noSelect'>
       <Header/>
       <AudioPlayer/>
       <CircleText/>

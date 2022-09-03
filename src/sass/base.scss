@@ -1,7 +1,6 @@
 $smooth:  all 300ms ease-in-out;
 
 body, html {
-    overflow: hidden;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -15,10 +14,14 @@ p {
     font-family: $openSans;
     font-size: $paragraph;
 }
-
+.hud {
+    position: relative;
+    z-index: 999;
+}
 .wrapper {
     margin: 1% auto;
-    height: calc(100vh - 40px);
+    height: 5000px;
+    overflow-y: scroll;
     width: calc(100vw - 80px);
     border: 2px solid $flame;
 }
@@ -28,3 +31,71 @@ p {
     right: 50px;
     height: 200px;
 }
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $flame;
+    transform-origin: 0%;     
+}
+
+._noSelect {
+    // No Selection
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  html {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5000px;
+    overflow-y: scroll;
+}
+.fragmentation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    div.moving {
+        width: 200px;
+        margin: 0 auto;
+        img.head {
+            width: 160px;
+        }
+        img.dress {
+            position: relative;
+            right: 7.5px;
+            top: -7px;
+            width: 191px;
+        }
+        img.leggy {
+            width: 165px;
+            position: relative;
+            right: 5px;
+            top: -12px;
+        }
+    }
+}
+  

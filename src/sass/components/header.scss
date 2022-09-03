@@ -1,11 +1,13 @@
 .header {
     display: flex;
     justify-content: center;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     border: 2px solid $flame;
     width: 100%;
+    padding-top: 20px;
+    
     .content {
         width: 500px;
         border: 2px solid $flame;

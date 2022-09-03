@@ -1,12 +1,12 @@
 import React from 'react';
-import CursorTracker from './components/CursorTracker';
 import HUD from './components/HUD';
+import Fragmenatation from './pages/Fragmentation';
 
 function App() {
   return (
     <div className=''>
-      <CursorTracker/>
       <HUD/>
+      <Fragmenatation/>
     </div>
   );
 }
