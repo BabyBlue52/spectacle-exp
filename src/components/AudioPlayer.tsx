@@ -46,7 +46,7 @@ export default function AudioPlayer() {
         onEnded={toggleReplay}
       />
       {/* Begin Audio only controls + Animation */}
-      <div className="audio-controls">
+      <div className="audio-controls _dropShadow">
         <div className="mute" onClick={onMute}>
           {muted ? (
             <div id="mute">

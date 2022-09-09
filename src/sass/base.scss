@@ -29,6 +29,7 @@ p {
     position: fixed;
     top: 30px;
     right: 50px;
+  
     height: 200px;
 }
 .progress-bar {
@@ -36,11 +37,10 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 10px;
+    height: 7px;
     background: $flame;
     transform-origin: 0%;     
 }
-
 ._noSelect {
     // No Selection
     -webkit-user-select: none;  
@@ -66,7 +66,11 @@ p {
     left: 0;
     width: 100vw;
     height: 5000px;
-    overflow-y: scroll;
+    overflow-y: scroll; 
+}
+.manila {
+    @extend .page;
+    background: $manila;
 }
 .fragmentation {
     position: fixed;
@@ -103,3 +107,9 @@ p {
 //         transform:
 //     }
 // }
+
+.sticky {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+}
