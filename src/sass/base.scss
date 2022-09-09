@@ -1,18 +1,22 @@
 $smooth:  all 300ms ease-in-out;
-
+$pageHeight: 8000px;
 body, html {
     height: 100vh;
     width: 100vw;
     margin: 0;
     font-family: $openSans;
+    scroll-behavior: smooth;
 }
 h1, h2, h3, h4 {
     font-family: $rosignBold;
     text-align: inherit;
 }
 p {
+    position: relative;
     font-family: $openSans;
     font-size: $paragraph;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 .hud {
     position: relative;
@@ -20,7 +24,7 @@ p {
 }
 .wrapper {
     margin: 1% auto;
-    height: 5000px;
+    height: $pageHeight;
     overflow-y: scroll;
     width: calc(100vw - 80px);
     border: 2px solid $flame;
@@ -41,6 +45,7 @@ p {
     background: $flame;
     transform-origin: 0%;     
 }
+
 ._noSelect {
     // No Selection
     -webkit-user-select: none;  
@@ -65,12 +70,30 @@ p {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 5000px;
-    overflow-y: scroll; 
+    height: $pageHeight;
+    padding: 15px 0;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
 }
 .manila {
     @extend .page;
     background: $manila;
+}
+.text-content {
+    position: fixed;
+    top: 33vh;
+    left: 15vw;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 20px;
+    .blurb {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        p {
+            max-width: 350px;
+        }
+    }
 }
 .fragmentation {
     position: fixed;
@@ -86,7 +109,7 @@ p {
         width: 11%;
         margin: 0 auto;
         img.head {
-            width: 100%;
+            width: 100%; 
         }
         img.dress {
             position: relative;
@@ -102,14 +125,20 @@ p {
         }
     }
 }
-// @media screen and (max-width: 1100px) {
-//     div.moving {
-//         transform:
-//     }
-// }
 
 .sticky {
     position: fixed;
-    top: 50px;
+    top: 0px;
     left: 20px;
 }
+.hidden {
+    display: none;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
