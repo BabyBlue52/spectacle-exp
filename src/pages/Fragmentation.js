@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ScrollProgress from "../components/ScrollProgress";
 
+import ScrollProgress from "../components/ScrollProgress";
+import { NextButton } from "../components/Buttons";
 
 function Fragmenatation() {
     const head = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169571/spectacular/marmalade_head_hzfaox.png';
@@ -15,6 +16,7 @@ function Fragmenatation() {
     const [headTrigger, setHeadTrigger] = useState(false);
     const [legsTrigger, setLegsTrigger] = useState(false);
     const [textReveal, setTextReveal] = useState(false);
+    const [showNext, setShowNext] = useState(false);
 
     /* Track scroll position */
     useEffect(() =>
@@ -45,6 +47,9 @@ function Fragmenatation() {
         if ( 33 < yRange.current ){ 
             setHeadTrigger(true)
             setLegsTrigger(true)
+        }   
+        if ( 95 < yRange.current) {
+            setShowNext(true)
         }
     }    
 
@@ -61,7 +66,7 @@ function Fragmenatation() {
         },
         driftRight: {
             x: '25vw',
-            scale: 1.1,
+            scale: 1.05,
             transition: { duration: 5 }
         }
     }
@@ -110,7 +115,12 @@ function Fragmenatation() {
                  <p className="sticky">{currentPercent}</p>
                  
             </div> 
-            <ScrollProgress/>
+            <ScrollProgress />
+
+            {/* Reveal nexxt button */}
+            <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
+                <a href="/commodification"><NextButton/></a>
+            </motion.div>
         </div>
     )
 }
