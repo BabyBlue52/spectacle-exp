@@ -65,20 +65,7 @@ p {
     scrollbar-width: none; /* Firefox */
   }
 
-.page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: $pageHeight;
-    padding: 15px 0;
-    overflow-y: scroll;
-    overscroll-behavior: contain;
-}
-.manila {
-    @extend .page;
-    background: $manila;
-}
+
 .text-content {
     position: fixed;
     top: 33vh;
@@ -92,36 +79,6 @@ p {
         justify-content: space-between;
         p {
             max-width: 350px;
-        }
-    }
-}
-.fragmentation {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-
-    div.moving {
-        width: 11%;
-        margin: 0 auto;
-        img.head {
-            width: 100%; 
-        }
-        img.dress {
-            position: relative;
-            right: 7px;
-            top: -7px;
-            width: 118%;
-        }
-        img.leggy {
-            width: 101%;
-            position: relative;
-            right: 2px;
-            top: -12px;
         }
     }
 }
