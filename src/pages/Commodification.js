@@ -1,9 +1,8 @@
-import React from 'react';
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, {useEffect, useState} from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-import 'swiper/css';
-import ScrollProgress from '../components/ScrollProgress';
+import ScrollProgress from "../components/ScrollProgress";
+import { NextButton, PrevButton } from "../components/Buttons";
 
 function Commodification() {
     const carousel = [
@@ -23,9 +22,63 @@ function Commodification() {
         {'img': 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1663288493/spectacular/2i21gyrbm6n40a_azcapj.jpg'},
     ]
 
+    const { scrollYProgress } = useScroll();
+    const [currentPercent, setCurrentPercent] = useState(0);
+    const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
+    
+    const [textReveal, setTextReveal] = useState(false);
+
+    /* Track scroll position */
+    useEffect(() =>
+          yRange.onChange((v) => {
+            setCurrentPercent(Math.trunc(yRange.current))
+          }
+    ),[yRange]);
+
+    /* Secondary event listener for change in scroll position */
+    useEffect(() => {
+        let loopInterval = 100
+        let loop = setTimeout(getPosition, loopInterval);
+        // Clear the timeout when unmounting the component :
+        return () => {
+            clearTimeout(loop);
+        };
+    })
+    // Check to see where User scroll is    
+    function getPosition() {
+        if ( yRange.current < 20 ) {
+            setTextReveal(false)
+        } else if  (yRange.current > 20) {
+            setTextReveal(true)
+        }
+
+    }    
+
+    const  textAnimation = {
+        hide: {
+            opacity: 0,
+            transition: { duration: 2 }
+        },
+        reveal: {
+            opacity: 1,
+            transition: { duration: 2 }
+        },
+        delayed: {
+            opacity: 1,
+            transition: { duration: 2, delay: 2 },
+        }
+    }
+
     return(
         <div className="page sunset">
             <div className="commodification"> 
+            <div className="text-content">
+                    <div className="blurb" >
+                        <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
+                            <p>reveal</p>
+                        </motion.div>
+                    </div>
+                </div>
                 <div class='slider'>
                     <div className='slide-track'>
                     {carousel.map((picture, i) => (
@@ -36,8 +89,14 @@ function Commodification() {
                     </div>
                 </div>
              </div>
+             
              <ScrollProgress/>
+             <NextButton/>
+             <a href="/">
+                <PrevButton/>
+             </a>
         </div>
     )
 }
+
 export default Commodification

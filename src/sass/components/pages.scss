@@ -21,7 +21,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -45%);
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -32,20 +32,38 @@
         margin: 0 auto;
         img.head {
             position: relative;
-            width: 100%;
-            right: -1.7%;
+            width: 98.5%;
+            right: -5px;
+            top: 2px;
         }
         img.dress {
             position: relative;
             right: 7px;
             top: -7px;
-            width: 118%;
+            width: 117%;
         }
         img.leggy {
-            width: 101%;
+            width: 100%;
             position: relative;
-            right: 2px;
+            right: -1px;
             top: -12px;
+        }
+    }
+
+    div.text-content {
+        position: fixed;
+        top: 33vh;
+        left: 15vw;
+        width: 70%;
+        margin: 0 auto;
+        padding: 0 20px;
+        .blurb {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            p {
+                max-width: 350px;
+            }
         }
     }
 }
@@ -54,56 +72,68 @@
    display: flex;
    align-items: center; 
 
-// Animation
-$animationSpeed: 40s;
+    // Animation
+    $animationSpeed: 40s;
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-250px * 10))}
-}
- // Styling
-.slider {
-    background: transparent;
-    height: max-content;
-    margin: auto;
-    overflow-x: hidden;
-    position: fixed;
-    width: calc(90vw - 20px);
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+    @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 10))}
+    }
+    // Styling
+    .slider {
+        background: transparent;
+        height: max-content;
+        margin: auto;
+        overflow-x: hidden;
+        position: fixed;
+        width: calc(85vw - 20px);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 40%;
+        
+        &::before,
+        &::after {
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 300px;
+        z-index: 2;
+        }
+        
+        &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+        }
     
-    &::before,
-    &::after {
-      content: "";
-      height: 100px;
-      position: absolute;
-      width: 300px;
-      z-index: 2;
+        &::before {
+        left: 0;
+        top: 0;
+        }
+        
+        .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+        }
+        
+        .slide {
+        height: 600px;
+        object-fit: contain;
+        width: 350px;
+        margin: 100px;
+        filter: drop-shadow(0, 10px, 10px, rgba(0,0,0,0.25));
+        }
+    }   
+
+    div.text-content {
+        position: fixed;
+        bottom: 300px;
+        left: 15%;
+        width: 67%;
+        margin: auto;
+        .blurb {
+            @extend .blurb;
+        }
     }
-    
-    &::after {
-      right: 0;
-      top: 0;
-      transform: rotateZ(180deg);
-    }
-  
-    &::before {
-      left: 0;
-      top: 0;
-    }
-    
-    .slide-track {
-      animation: scroll $animationSpeed linear infinite;
-      display: flex;
-      width: calc(250px * 14);
-    }
-    
-    .slide {
-      height: 600px;
-      object-fit: contain;
-      width: 350px;
-      margin: 100px;
-    }
-  }   
 }

@@ -66,22 +66,7 @@ p {
   }
 
 
-.text-content {
-    position: fixed;
-    top: 33vh;
-    left: 15vw;
-    width: 70%;
-    margin: 0 auto;
-    padding: 0 20px;
-    .blurb {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        p {
-            max-width: 350px;
-        }
-    }
-}
+
 
 .sticky {
     position: fixed;

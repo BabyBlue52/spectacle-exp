@@ -2,7 +2,6 @@ button.next-btn {
     display: flex;
     position: fixed;
     top: 50%;
-    right: 20px;
     background: none;
     border: none;
     z-index: 9999;
@@ -18,7 +17,6 @@ button.next-btn {
        transition: $smooth;
     }
     &:hover {
-        
         cursor: pointer;
         p {
             margin-left: 0px;
@@ -30,7 +28,13 @@ button.next-btn {
     }
 }
 
-button.prev-button {
+button.prev-btn {
     @extend button.next-btn;
-    left: 20px
+
+    &:hover {
+        span > svg {
+            margin-left: 10px;
+            transition: $smooth;
+        }
+    }
 }
