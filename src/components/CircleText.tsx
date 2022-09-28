@@ -4,7 +4,7 @@ import * as animationData from '../animations/circle-text.json';
 
 export default function CircleText() {
     const style = {
-        height: 100
+        height: '6.5vw'
     }
     return (
         <div>

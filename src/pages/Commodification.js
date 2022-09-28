@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton, PrevButton } from "../components/Buttons";
+import { Link } from 'react-router-dom';
 
 function Commodification() {
     const carousel = [
@@ -92,9 +93,9 @@ function Commodification() {
              
              <ScrollProgress/>
              <NextButton/>
-             <a href="/">
+             <Link to="/">
                 <PrevButton/>
-             </a>
+             </Link>
         </div>
     )
 }

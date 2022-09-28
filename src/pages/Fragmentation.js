@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton } from "../components/Buttons";
+
 
 function Fragmenatation() {
     const head = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169571/spectacular/marmalade_head_hzfaox.png';
@@ -119,10 +122,16 @@ function Fragmenatation() {
 
             {/* Reveal nexxt button */}
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
-                <a href="/commodification"><NextButton/></a>
+                <Link to="/commodification"><NextButton/></Link>
             </motion.div>
         </div>
     )
 }
 
-export default Fragmenatation
+const mapStateToProps = (state) => {
+    return {
+       counter: state
+    };
+ };
+ 
+export default connect(mapStateToProps)(Fragmenatation)
