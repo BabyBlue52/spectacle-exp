@@ -8,7 +8,7 @@ import PageCounter from './PageCounter';
 
 function HUD() {
   return (
-    <div className='hud wrapper _noSelect'>
+    <div className='hud wrapper'>
       <Header/>
       <AudioPlayer/>
       <CircleText/>

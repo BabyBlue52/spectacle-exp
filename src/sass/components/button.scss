@@ -29,9 +29,28 @@ button.next-btn {
 }
 
 button.prev-btn {
-    @extend button.next-btn;
-
+    display: flex;
+    position: fixed;
+    top: 50%;
+    background: none;
+    border: none;
+    z-index: 9999;
+    transition: $smooth;;
+    p {
+        position: relative;
+        letter-spacing: 5px;
+        font-size: 12px;
+        margin: 0 10px;
+    }
+    span > svg {
+       position: relative;
+       transition: $smooth;
+    }
     &:hover {
+        cursor: pointer;
+        p {
+            margin: 0px 10px;
+        }
         span > svg {
             margin-left: 10px;
             transition: $smooth;

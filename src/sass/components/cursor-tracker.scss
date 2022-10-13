@@ -1,0 +1,50 @@
+.tracking-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 67vh;
+
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    
+    img {
+        position: fixed;
+        top: 20vh;
+        height: 67vh;
+        filter: grayscale(100%);
+    }
+    svg.colorized {
+      opacity: 1 !important;
+      position: absolute;
+      
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+  .cursor-dot, .cursor-dot-outline, .colorized {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: $smooth;
+    z-index: 9996;
+  }
+  
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: $flame;
+  }
+  
+  .cursor-dot-outline {
+    width: 80px;
+    height: 80px;
+    background-color: rgba($flame, 0.4);
+    mix-blend-mode: color-dodge;
+  }
+} 

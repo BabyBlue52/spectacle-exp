@@ -23,6 +23,7 @@ function Commodification() {
         {'img': 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1663288493/spectacular/2i21gyrbm6n40a_azcapj.jpg'},
     ]
 
+    // Scroll Progress Boiler plate
     const { scrollYProgress } = useScroll();
     const [currentPercent, setCurrentPercent] = useState(0);
     const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
@@ -92,7 +93,9 @@ function Commodification() {
              </div>
              
              <ScrollProgress/>
-             <NextButton/>
+             <Link to="/negation">
+                <NextButton/>
+             </Link>
              <Link to="/">
                 <PrevButton/>
              </Link>

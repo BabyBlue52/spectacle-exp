@@ -8,7 +8,7 @@ export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
   const [muted, setMute] = React.useState<boolean>(false);
   const [replay, setReplay] = React.useState<boolean>(false);
-  const url = "https://res.cloudinary.com/dzaaowrv5/video/upload/v1660598449/theelevatorbossanova_zukgc3.mp3";
+  const url = "https://res.cloudinary.com/dzaaowrv5/video/upload/v1660598449/spectacular/theelevatorbossanova_zukgc3.mp3";
 
   const volume  = 0.2
   const onMute = () => {

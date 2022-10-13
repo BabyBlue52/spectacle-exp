@@ -1,0 +1,40 @@
+#svg {
+  height: 20vh;
+  width: 20vw;
+  filter: url("#turbulence");
+  opacity: 0.25;
+}
+.wave-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  
+  .left {
+    position: relative;
+    width: 50%;
+    display: flex;  
+    .ripple {
+      position: absolute;
+      top: 10%;
+      left: 20%;
+      filter: blur(2px);
+      svg {@extend #svg}
+    }
+  }
+  .right {
+    position: relative;
+    width: 50%;
+    display: flex;  
+    .ripple {
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      filter: blur(2px);
+      svg {@extend #svg}
+    }
+  }
+}
+
+
+  
