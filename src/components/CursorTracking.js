@@ -88,7 +88,6 @@ export default function CursorTracker() {
 
     dotOutline.current.style.top = _y.current + "px";
     dotOutline.current.style.left = _x.current + "px";
-
     requestRef.current = requestAnimationFrame(animateDotOutline);
   };
 

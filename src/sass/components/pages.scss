@@ -157,7 +157,25 @@
     .color {
         filter:blur(10px);
     }
-    // .bw {
+}
 
-    // }
+.alienation {
+    display: flex;
+    width: 100%;
+    img.unhappy {
+        position: fixed;
+        top: 67%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: calc(60vh - 10px);
+    }
+    .flight-path {
+        position: fixed;
+        border: 2px solid $black;
+        padding: 20px;
+        width: 100%;
+        img.space-ship {
+            height: calc(10vh - 10px);
+        }
+    }
 }

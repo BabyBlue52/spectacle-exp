@@ -51,7 +51,7 @@ function Fragmenatation() {
             setHeadTrigger(true)
             setLegsTrigger(true)
         }   
-        if ( 95 < yRange.current) {
+        if ( 90 < yRange.current) {
             setShowNext(true)
         }
     }    

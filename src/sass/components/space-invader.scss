@@ -1,0 +1,62 @@
+.flight-path {
+    position: fixed;
+    left:0;
+    top: 12%;
+    width: calc(100% - 45px);
+    margin: 0 10px;
+    padding: 0 10px;
+    z-index: 9999;
+  }
+  .box {
+    height: 12vw;
+    width: 12vw;
+    min-width: 200px;
+  }
+  .space-ship {
+    width: 12vw;
+    min-width: 200px;
+    height: 12vw;
+    transition: 300ms ease-in-out all;
+    &:hover {
+      cursor: pointer;
+      transition: 300ms ease-in-out all;
+    }
+    img {
+      width: inherit;
+      min-width: inherit;
+      height: inherit;
+      object-fit: contain;
+    }
+  }
+  
+  .skyfall {
+    @extend .flight-path;
+    top: calc(12vw + 60px);
+    height: 500px;  
+  }
+  .lightning {
+    height: 10vw;
+    width: 10vw;
+    min-width: 140px;
+    img {
+      height: inherit;
+      width: inherit;
+      min-width: inherit;
+      object-fit: contain;
+      filter: grayscale(100%);
+      margin-left: 3vw;
+    }
+  }
+  .wiggle {
+    animation: wiggle 0.5s infinite;
+    transition: 300ms ease-in-out all;
+  }
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   25% { transform: rotate(-5deg); }
+   50% { transform: rotate(5deg); }
+   75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+  }
+  
+  

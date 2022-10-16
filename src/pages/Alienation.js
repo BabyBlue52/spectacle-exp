@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton, PrevButton } from "../components/Buttons";
-import { Link } from 'react-router-dom';
-import Ripple from '../components/Ripple';
-import CursorTracker from '../components/CursorTracking';
+import SpaceInvader from '../components/SpaceInvader';
 
-function Negation () {
-    const timeMag = "https://res.cloudinary.com/dzaaowrv5/image/upload/v1664660424/spectacular/05ec98d72cbb5b7d2800112285f8a816_yunmiz.jpg";
-     // Scroll Progress Boiler plate
+
+function Alienation () {
+    const theDumps = "https://res.cloudinary.com/dzaaowrv5/image/upload/v1665627873/spectacular/1960s-unhappy-sad-depressed-woman-vintage-images_copy_xgs80t.png";
+    
+    // Scroll Progress Boiler plate
      const { scrollYProgress } = useScroll();
      const [currentPercent, setCurrentPercent] = useState(0);
      const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
@@ -62,34 +63,14 @@ function Negation () {
      }
 
     return (
-        <div className='page tin'>
-            <CursorTracker/>        
-            {/* Turbulence */}
-            <div>
-                <div className='wave-container'>
-                    <div className='left'>
-                        <Ripple/>    
-                    </div>
-                    <div className='right'>
-                        <Ripple/>    
-                    </div>
-                </div>
+        <div className='page manila'>
+            <SpaceInvader/>
+            <div className="alienation">
+                <img src={theDumps} className="unhappy"/>
             </div>
-
             <ScrollProgress/>
-            {/* Reveal nexxt button */}
-            <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
-                <Link to="/Alienation">
-                    <NextButton/>
-                </Link>
-            </motion.div>
-            
-             <Link to="/commodification">
-                <PrevButton/>
-             </Link>
         </div>
-        
-    )
+    ) 
 }
 
-export default Negation;
+export default Alienation 
