@@ -57,3 +57,26 @@ button.prev-btn {
         }
     }
 }
+
+button.menu-btn {
+    z-index: 9999;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;  
+    svg {
+      fill: $black;
+      height: 30px;
+      width: 30px;
+    }
+  }
+button.menu-btn.invert {
+    svg {
+      fill: $manila;
+    }
+  }

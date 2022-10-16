@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-
 const Header = () => {
     const [pageTitle, setPageTitle]= useState('Fragmentation');
     

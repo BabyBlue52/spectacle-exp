@@ -1,0 +1,66 @@
+
+
+
+.menu-wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  margin: 0;
+  background: $black;
+  z-index: 9998;
+
+  .menu-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .menu-header {
+      position: relative;
+      height: 50px;
+      background: inherit;
+      display: flex;
+      justify-content: center;
+    }
+    .chapters {
+      .block {
+        position: relative;
+        left: -250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        transition: $slow;
+        cursor: pointer;
+        h2 {
+          width: 100%;
+          margin: 20px auto 0 auto;
+          text-align: center;
+          transition: $slow;
+          text-transform: uppercase;
+          color: $manila;
+          font-size: $paragraph;
+        }
+        p.subtitle {
+          font-family: $rosignBold;
+          font-size: $subtitle;
+          transition: $slow;
+          margin-top: 0;
+          color: $manila;
+        }
+        &:hover {
+          background: rgba($flame, 0.2);
+          transition: $slow;
+          color: $flame;
+          h2, p {
+            transform: scale(1.15);
+            transition: $slow;
+          }
+        }
+      }
+    }
+  }
+}

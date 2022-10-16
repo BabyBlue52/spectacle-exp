@@ -1,5 +1,7 @@
 $smooth:  all 300ms ease-in-out;
+$slow: 750ms ease-in-out all;
 $pageHeight: 8000px;
+
 body, html {
     height: 100vh;
     width: 100vw;
@@ -27,7 +29,7 @@ p {
     height: $pageHeight;
     overflow-y: scroll;
     width: calc(100vw - 80px);
-    border: 2px solid $flame;
+    // border: 2px solid $flame;
 }
 .circle-text-animation {
     position: fixed;
