@@ -49,29 +49,29 @@ export default function AudioPlayer() {
       <div className="audio-controls _dropShadow">
         <div className="mute" onClick={onMute}>
           {muted ? (
-            <div id="mute">
+            <div id="mute" className="icon">
               <FaVolumeMute />
             </div>
           ) : (
-            <div id="unmute">
+            <div id="unmute" className="icon">
               <FaVolumeUp />
             </div>
           )}
         </div>
         <div className={replay ? "hide" : "play-pause"} onClick={togglePlay}>
           {isPlaying ? (
-            <div id="pause">
+            <div id="pause" className="icon">
               <FaPause />
             </div>
           ) : (
-            <div id="play">
+            <div id="play" className="icon">
               <FaPlay />
             </div>
           )}
         </div>
         {/* Replay action */}
         <div className={replay ? "replay" : "hide"} onClick={togglePlay}>
-          <div id="replay">
+          <div id="replay" className="icon">
             <MdReplay />
           </div>
         </div>

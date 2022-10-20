@@ -15,20 +15,14 @@
     .mute, .play-pause, .replay {
       margin-top: 8.5px;
       margin-right: 10px;
-      #play > svg {
-        fill: $manila;
-      }
-      #mute > svg {
-        fill: $manila;
-      }
-      #unmute > svg {
-        fill: $manila;
-      }
-      #pause > svg {
-        fill: $manila;
-      }
-      #replay > svg {
-        fill: $manila;
+      .icon { 
+        svg {
+          fill: $manila;
+          &:hover {
+            fill: $flame;
+            transition: $smooth;
+          }
+        }
       }
     }
     .animation {

@@ -3,14 +3,18 @@ button.next-btn {
     position: fixed;
     top: 50%;
     background: none;
-    border: none;
-    z-index: 9999;
+    border: 1px solid rgba($flame, 0.5);
+    border-radius: 20px;
+    padding: 10px 20px;
+    z-index: 999;
     transition: $smooth;;
     p {
         position: relative;
         letter-spacing: 5px;
         font-size: 12px;
         margin: 0 10px;
+        text-transform: uppercase;
+        font-weight: bold;
     }
     span > svg {
        position: relative;
@@ -18,44 +22,21 @@ button.next-btn {
     }
     &:hover {
         cursor: pointer;
+        background: $flame;
         p {
-            margin-left: 0px;
+            margin: 0 10px;
+            transition: $smooth;
+            
         }
         span > svg {
-            margin-right: 10px;
+            margin: 0  20px;
             transition: $smooth;
         }
     }
 }
 
 button.prev-btn {
-    display: flex;
-    position: fixed;
-    top: 50%;
-    background: none;
-    border: none;
-    z-index: 9999;
-    transition: $smooth;;
-    p {
-        position: relative;
-        letter-spacing: 5px;
-        font-size: 12px;
-        margin: 0 10px;
-    }
-    span > svg {
-       position: relative;
-       transition: $smooth;
-    }
-    &:hover {
-        cursor: pointer;
-        p {
-            margin: 0px 10px;
-        }
-        span > svg {
-            margin-left: 10px;
-            transition: $smooth;
-        }
-    }
+    @extend button.next-btn;
 }
 
 button.menu-btn {

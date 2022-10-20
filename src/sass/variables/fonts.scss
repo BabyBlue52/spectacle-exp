@@ -1,5 +1,5 @@
 // Open Sans
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sanswght@400;500&display=swap');
 
 // Rosign Bold
 @font-face {
@@ -9,10 +9,10 @@
         url(./RosignBoldItalic700.woff2) format('woff2');
 }
 
-$openSans: 'Arial', sans-serif;
+$openSans: 'Open Sans', sans-serif;
 $rosignBold: 'Rosign Bold Italic', san-serif;
 
-$paragraph: 1rem;
+$paragraph: 0.8rem;
 $subtitle: 1.4rem;
 $medium: 1.8rem;
 $headline: 3.2rem;

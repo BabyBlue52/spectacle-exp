@@ -9,7 +9,7 @@ import { NextButton } from "../components/Buttons";
 
 function Fragmenatation() {
     const head = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169571/spectacular/marmalade_head_hzfaox.png';
-    const dress = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169571/spectacular/marmalade_dress_zo8par.png';
+    const dress = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1666233496/spectacular/marmalade_dress_iz6jak.png';
     const leggy = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169600/spectacular/marmalade_legs_xcbnrr.png';
 
     const { scrollYProgress } = useScroll();
@@ -89,19 +89,25 @@ function Fragmenatation() {
         }
     }
 
-    const paragraph1 = "The Commodity takes all of the human wants and desires which are made into an objects of attaining to simulate that lifestyle."
-    const paragraph2 = "It shatters these realities to reconstruct in its own narrative form. a cohesion in which dissidence is swiftly met with flak, mockery."
-
     return (
         <div className="page manila">
             <div className="fragmentation"> 
                 <div className="text-content">
                     <div className="blurb" >
                         <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>{paragraph1}</p>
+                            <div className="left">
+                                <p>The Commodity takes all of the human wants and desires which are made into an objects of attaining to simulate that lifestyle.</p> 
+                                <p>Neque convallis a cras semper auctor neque vitae tempus quam. Semper auctor neque vitae tempus quam pellentesque nec nam. At lectus urna duis convallis convallis. Cras ornare arcu dui vivamus arcu. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Arcu dictum varius duis at consectetur. Eu facilisis sed odio morbi quis. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vulputate mi sit amet mauris commodo. Tristique senectus et netus et malesuada fames ac turpis. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Quam id leo in vitae turpis massa.</p>
+                                <p>Egestas diam in arcu cursus euismod. Ut placerat orci nulla pellentesque dignissim enim. Penatibus et magnis dis parturient. Massa tincidunt dui ut ornare lectus. Elit duis tristique sollicitudin nibh sit amet. Nisl tincidunt eget nullam non nisi est sit. Sed ullamcorper morbi tincidunt ornare massa eget. In pellentesque massa placerat duis ultricies lacus sed turpis. Orci dapibus ultrices in iaculis nunc sed augue. Pellentesque dignissim enim sit amet. Sed adipiscing diam donec adipiscing tristique. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Id nibh tortor id aliquet lectus proin.</p>
+                            </div>
                         </motion.div>
                         <motion.div variants={textAnimation} animate={textReveal ? 'delayed' : 'hide'}>
-                            <p style={{'bottom': '20px'}}>{paragraph2}</p>
+                                <div className="right">
+                                <p> It shatters these realities to reconstruct in its own narrative form. a cohesion in which dissidence is swiftly met with flak, mockery.</p>
+                                <p>Neque convallis a cras semper auctor neque vitae tempus quam. Semper auctor neque vitae tempus quam pellentesque nec nam. At lectus urna duis convallis convallis. Cras ornare arcu dui vivamus arcu. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Arcu dictum varius duis at consectetur. Eu facilisis sed odio morbi quis. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vulputate mi sit amet mauris commodo. Tristique senectus et netus et malesuada fames ac turpis. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Quam id leo in vitae turpis massa.</p>
+
+                                <p>Egestas diam in arcu cursus euismod. Ut placerat orci nulla pellentesque dignissim enim. Penatibus et magnis dis parturient. Massa tincidunt dui ut ornare lectus. Elit duis tristique sollicitudin nibh sit amet. Nisl tincidunt eget nullam non nisi est sit. Sed ullamcorper morbi tincidunt ornare massa eget. In pellentesque massa placerat duis ultricies lacus sed turpis. Orci dapibus ultrices in iaculis nunc sed augue. Pellentesque dignissim enim sit amet. Sed adipiscing diam donec adipiscing tristique. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Id nibh tortor id aliquet lectus proin.</p>
+                                </div>
                         </motion.div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
-$smooth:  all 300ms ease-in-out;
-$slow: 750ms ease-in-out all;
-$pageHeight: 8000px;
+$smooth: all 300ms ease-in-out;
+$slow: all 750ms ease-in-out;
+$pageHeight: 10000px;
 
 body, html {
     height: 100vh;
@@ -17,8 +17,8 @@ p {
     position: relative;
     font-family: $openSans;
     font-size: $paragraph;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
+    text-align: justify;
 }
 .hud {
     position: relative;

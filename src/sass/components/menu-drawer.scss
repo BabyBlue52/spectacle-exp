@@ -52,12 +52,12 @@
           color: $manila;
         }
         &:hover {
-          background: rgba($flame, 0.2);
           transition: $slow;
-          color: $flame;
+          
           h2, p {
             transform: scale(1.15);
             transition: $slow;
+            color: $flame;
           }
         }
       }
