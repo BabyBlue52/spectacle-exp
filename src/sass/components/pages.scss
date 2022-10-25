@@ -67,9 +67,11 @@
             justify-content: space-between;
             div {
                 position: fixed;
+                max-width: 300px;
                 .left {
                     position: inherit;
                     top: 33%;  
+                    
                 } 
                 .right {
                     position: inherit;
@@ -184,5 +186,27 @@
         left: 50%;
         transform: translate(-50%, -50%);
         height: calc(60vh - 10px);
+    }
+}
+.homogenization {
+    width: 100%;
+    .pixelator {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 67vh;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 10px solid white;
+        
+        box-shadow: 0px 10px 25px rgba($black, 0.5);
+    }
+    input[type="range"] {
+        // position: relative;
+        // z-index: 999;
+        width: 30vh;
+        margin: 20px auto 20px;
+        cursor: pointer;
     }
 }
