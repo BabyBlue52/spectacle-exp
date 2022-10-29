@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineClose, MdOutlineMenuOpen } from "react-icons/md";
 import { Link } from 'react-router-dom';
@@ -30,6 +30,14 @@ export const MenuDrawer = () => {
     hidden: { x: -250 }
   };
 
+  const locked = {
+    opacity: .33,
+  }
+
+  const unlocked = {
+    opacity: 0,
+  }
+
   const chapterLoop = chapters.map((chapter, i) => (
     <motion.div
       key={i}
@@ -46,18 +54,23 @@ export const MenuDrawer = () => {
       </Link>
     </motion.div>
   ));
-  
-  useEffect(() => {
 
-  },[])
+  
+ 
 
   return (
     <>
       {/* Menu Button Toggle */}
-      <button className={isOpen ? "menu-btn invert" : "menu-btn "} onClick={openMenu}>
+      <button className={isOpen ? "menu-btn invert" : "menu-btn"} onClick={openMenu}>
         {isOpen ? <MdOutlineClose /> : <MdOutlineMenuOpen />}
       </button>
-
+      <motion.div 
+      className={ isOpen ? "locked" : ""}
+      animate={isOpen ? locked : unlocked}
+      transition= {{
+        delay: 0.33
+      }}
+      ></motion.div>
       <motion.div
         className="menu-wrapper"
         animate={isOpen ? "visible" : "hidden"}
@@ -72,6 +85,7 @@ export const MenuDrawer = () => {
           <div className="chapters">{chapterLoop}</div>
         </div>
       </motion.div>
+        
     </>
   );
 };
