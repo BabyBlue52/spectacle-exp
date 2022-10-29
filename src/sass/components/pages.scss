@@ -71,12 +71,17 @@
                 .left {
                     position: inherit;
                     top: 33%;  
-                    
+                    height: 40vh;
+                    max-height: 420px;
+                    overflow: hidden; 
                 } 
                 .right {
                     position: inherit;
                     right: 17%;
-                    bottom: 45%;
+                    bottom: 48%;
+                    height: 40vh;
+                    max-height: 420px;
+                    overflow: hidden; 
                 }  
             }
             p {

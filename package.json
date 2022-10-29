@@ -21,7 +21,6 @@
     "react-icons": "^4.4.0",
     "react-pixelify": "^0.2.2",
     "react-player": "2.10.1",
-    "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",

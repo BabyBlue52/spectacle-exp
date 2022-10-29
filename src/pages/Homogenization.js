@@ -15,6 +15,8 @@ function Homogenization () {
     
     const [textReveal, setTextReveal] = useState(false);
     const [showNext, setShowNext] = useState(false);
+    const [pixelRatio, setPixelRatio] = useState(0);
+
     /* Track scroll position */
     useEffect(() =>
           yRange.onChange((v) => {
@@ -31,16 +33,18 @@ function Homogenization () {
             clearTimeout(loop);
         };
     })
-    let pixelRatio = yRange.current / 4;
 
     // Check to see where User scroll is    
     function getPosition() {
         if ( yRange.current < 20 ) {
             setTextReveal(false)
+            setPixelRatio(0)
         }
         if (yRange.current > 20) {
             setTextReveal(true)
             setShowNext(false)
+            setPixelRatio(5)
+            
         } if ( yRange.current > 90) {
            setShowNext(true);
         }
@@ -61,6 +65,8 @@ function Homogenization () {
             transition: { duration: 2, delay: 2 },
         }
     }
+            
+    
 
    return (
         <div className='page tin'>

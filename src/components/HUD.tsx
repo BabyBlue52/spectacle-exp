@@ -1,15 +1,18 @@
 import React from 'react';
 
+
 import Header from './Header';
 import AudioPlayer from './AudioPlayer';
 import CircleText from './CircleText';
 import PageCounter from './PageCounter';
 
 
-function HUD() {
+
+function HUD(props:any) {
+  
   return (
     <div className='hud wrapper'>
-      <Header/>
+      <Header chapter={props.chapter} pageTitle={props.pageTitle}/>
       <AudioPlayer/>
       <CircleText/>
       <PageCounter/>

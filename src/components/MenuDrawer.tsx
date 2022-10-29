@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineClose, MdOutlineMenuOpen } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 export const MenuDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const chapters = [
-    { name: "chapter 1", subtitle: "Fragmentation" },
-    { name: "chapter 2", subtitle: "Commodification" },
-    { name: "chapter 3", subtitle: "Negation" },
-    { name: "chapter 4", subtitle: "Alienation" },
-    { name: "chapter 5", subtitle: "Homogenization" },
+    { name: "chapter 1", subtitle: "Fragmentation", link: '/' },
+    { name: "chapter 2", subtitle: "Commodification", link: '/commodification' },
+    { name: "chapter 3", subtitle: "Negation", link: '/negation' },
+    { name: "chapter 4", subtitle: "Alienation", link: '/alienation'},
+    { name: "chapter 5", subtitle: "Homogenization", link: '/homogenization' },
     { name: "credits" }
   ];
 
@@ -39,10 +40,16 @@ export const MenuDrawer = () => {
         delay: i * 0.15
       }}
     >
-      <h2>{chapter.name}</h2>
-      <p className="subtitle">{chapter.subtitle}</p>
+      <Link to={`${chapter.link}`}>
+        <h2>{chapter.name}</h2>
+        <p className="subtitle">{chapter.subtitle}</p>
+      </Link>
     </motion.div>
   ));
+  
+  useEffect(() => {
+
+  },[])
 
   return (
     <>

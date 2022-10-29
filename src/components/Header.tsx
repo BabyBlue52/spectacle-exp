@@ -1,16 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-const Header = () => {
-    const [pageTitle, setPageTitle]= useState('Fragmentation');
-    
+const Header = (props:any) => {
     return (
         <>
             <div className='header'>
                 <div className='content'>
-                <h4> Page 1</h4>
-                <h1>{pageTitle}</h1>
+                    <h4> Chapter {props.chapter ? props.chapter : 1}</h4>
+                    <h1>{props.pageTitle}</h1>
                 </div>
-                
             </div>
             
         </>

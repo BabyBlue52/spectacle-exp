@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { connect } from "react-redux";
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton } from "../components/Buttons";
@@ -20,7 +19,7 @@ function Fragmenatation() {
     const [legsTrigger, setLegsTrigger] = useState(false);
     const [textReveal, setTextReveal] = useState(false);
     const [showNext, setShowNext] = useState(false);
-
+    
     /* Track scroll position */
     useEffect(() =>
           yRange.onChange((v) => {
@@ -120,9 +119,6 @@ function Fragmenatation() {
                 <motion.div className="moving" variants={variants} animate={legsTrigger ? 'driftRight' : 'initial'}>
                     <img src={leggy} alt="" className="leggy"/>  
                 </motion.div>
-                {/* Staging */}
-                 <p className="sticky">{currentPercent}</p>
-                 
             </div> 
             <ScrollProgress />
 
@@ -134,10 +130,5 @@ function Fragmenatation() {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-       counter: state
-    };
- };
  
-export default connect(mapStateToProps)(Fragmenatation)
+export default Fragmenatation

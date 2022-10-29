@@ -30,6 +30,7 @@ export const Pixelation = (props) => {
         }
         
     }
+    
     useEffect(() => {
         const interval = setInterval(() => {
             increment();

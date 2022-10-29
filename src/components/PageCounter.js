@@ -1,28 +1,45 @@
 import React, { useEffect, useState } from "react";
 import FlipNumbers from "react-flip-numbers";
-
+import { useLocation } from 'react-router-dom';
 export default (props) => {
-  const [number, setNumber] = useState("1");
-  let currentPage = 0;
+  const [slug, setSlug]= useState('Fragmentation');  
+  const [chapter, setChapter] = useState('1')
 
-  function increment() { 
-    if (currentPage === 5) {
-      currentPage = 0;
-    } else {
-      currentPage = currentPage + 1;
-      setNumber(currentPage.toString());
-    }
-  }
+  const location = useLocation();
 
   useEffect(() => {
-    // Timer
-    // const interval = setInterval(() => {
-    //   increment();
-    // }, 2000);
+    getURL();
+ },[location])
 
-    // return () => clearInterval(interval);
-  }, []);
-
+ const getURL = () => {
+  
+     setSlug(window.location.pathname);
+     switch (slug) {
+             case '/':
+                 setChapter('1')
+                 break
+             case '/commodification':
+                 
+                 setChapter('2')
+                 break
+             case '/negation':
+                 
+                 setChapter('3')
+                 break
+             case '/alienation':
+                 
+                 setChapter('4')
+                 break
+             case '/homogenization':
+                 
+                 setChapter('5')
+                 break
+             case '/credits':
+                 break
+             default:
+                 break
+         }
+ }
   return (
     <div className="page-counter">
       <FlipNumbers
@@ -31,7 +48,7 @@ export default (props) => {
         background="white"
         play
         perspective={130}
-        numbers={number}
+        numbers={chapter}
       />
       <p className="page-max">
         <span className="slash">/</span>
