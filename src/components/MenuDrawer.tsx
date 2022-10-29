@@ -70,6 +70,7 @@ export const MenuDrawer = () => {
       transition= {{
         delay: 0.33
       }}
+      onClick={() => {setIsOpen(false)}}
       ></motion.div>
       <motion.div
         className="menu-wrapper"
