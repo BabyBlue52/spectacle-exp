@@ -36,16 +36,22 @@ function Homogenization () {
 
     // Check to see where User scroll is    
     function getPosition() {
-        if ( yRange.current < 20 ) {
+        if ( yRange.current < 25 ) {
             setTextReveal(false)
             setPixelRatio(0)
         }
-        if (yRange.current > 20) {
+        if (yRange.current > 25) {
             setTextReveal(true)
             setShowNext(false)
             setPixelRatio(5)
-            
-        } if ( yRange.current > 90) {
+        }
+        if (yRange.current > 50) {
+            setPixelRatio(10)
+        }
+        if (yRange.current > 75) {
+            setPixelRatio(15)
+        }
+         if ( yRange.current > 90) {
            setShowNext(true);
         }
 

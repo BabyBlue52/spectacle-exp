@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineClose, MdOutlineMenuOpen } from "react-icons/md";
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ export const MenuDrawer = () => {
     { name: "chapter 1", subtitle: "Fragmentation", link: '/' },
     { name: "chapter 2", subtitle: "Commodification", link: '/commodification' },
     { name: "chapter 3", subtitle: "Negation", link: '/negation' },
-    { name: "chapter 4", subtitle: "Alienation", link: '/alienation'},
+    { name: "chapter 4", subtitle: "Alienation", link: '/alienation' },
     { name: "chapter 5", subtitle: "Homogenization", link: '/homogenization' },
     { name: "credits" }
   ];
@@ -37,6 +37,24 @@ export const MenuDrawer = () => {
   const unlocked = {
     opacity: 0,
   }
+
+  // Keyboard Shourtcuts
+  useEffect(() => {
+    const handle = (e: { code: string; }) => {
+      if (e.code === "KeyM") {
+        setIsOpen(!isOpen);
+      } else {
+        return
+      }
+    };
+
+    window.addEventListener("keydown", handle);
+    return () => {
+      // On unmount
+      window.removeEventListener("keydown", handle);
+    };
+  }, [isOpen]);
+
 
   const chapterLoop = chapters.map((chapter, i) => (
     <motion.div
