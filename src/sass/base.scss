@@ -8,6 +8,7 @@ body, html {
     margin: 0;
     font-family: $openSans;
     scroll-behavior: smooth;
+    background: $manila;
 }
 h1, h2, h3, h4 {
     font-family: $rosignBold;
@@ -104,9 +105,10 @@ p {
     z-index: 999;
 }
 
+//Scroll Animation
 .scroll-container{
     position: fixed;
-    bottom: 0%;
+    bottom: 2%;
     left: calc(50vw - 150px);
     width: 300px;
     height: 200px;

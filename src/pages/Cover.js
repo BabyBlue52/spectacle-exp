@@ -3,7 +3,9 @@ import ScrollAnimation from '../animations/ScrollAnimation';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import svg from '../icon/society.svg';
 
-function SplashPage () {
+function CoverPage () {
+    const [hidden, setHidden] = useState(false);
+
     // Scroll Progress Boiler plate
     const { scrollYProgress } = useScroll();
     const [currentPercent, setCurrentPercent] = useState(0);
@@ -24,19 +26,39 @@ function SplashPage () {
           clearTimeout(loop);
         };
     })
+
     // Check to see where User scroll is    
     function getPosition() {
-        if ( yRange.current > 10 ) {
+        if (( yRange.current < 1 )) {
+            setHidden(false)
+        }
+        if (( yRange.current > 1 )) {
+            setHidden(true)
+        }
+        if ( yRange.current > 5 ) {
             window.location.pathname = '/fragmentation'
         }
     }
+
+    const variants = {
+        show: {
+            opacity: 1,
+            transition: { duration: .5 }
+        },
+        hide: {
+            opacity: 0,
+            transition: { duration: .5 }
+        }
+    }
     return(
-        <motion.div className='splash page'>
-            <div className='society'>
+        <div className='page cover'>
+            <motion.div className='society' 
+            variants={variants}
+            animate={hidden ? 'hide' :'show'}>
                 <img src={svg}/>
-            </div>
+            </motion.div>
             <ScrollAnimation/>
-        </motion.div>
+        </div>
     )
 }
-export default SplashPage
+export default CoverPage

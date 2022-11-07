@@ -9,10 +9,10 @@ import Alienation from './pages/Alienation';
 import Homogenization from './pages/Homogenization';
 
 import { MenuDrawer } from './components/MenuDrawer';
-import SplashPage from './pages/Splash';
+import CoverPage from './pages/Cover';
 
 function App() {
-  const [isSplash, setIsSplash] = useState<boolean>(false);
+  const [isCover, setIsCover] = useState<boolean>(false);
   const [pageTitle, setPageTitle]= useState<string>('Fragmentation');
   const [slug, setSlug]= useState<string>('');
   const [chapter, setChapter] = useState<string>()
@@ -34,35 +34,35 @@ function App() {
   setSlug(location.pathname);
     switch (slug) {
               case '/':
-                setIsSplash(true);
+                setIsCover(true);
                 break
               case '/fragmentation':
-                setIsSplash(false);
+                setIsCover(false);
                  setPageTitle('fragmentation')
                  setChapter('1')
                  break
               case '/commodification':
-                setIsSplash(false);
+                setIsCover(false);
                  setPageTitle('commodification');
                  setChapter('2')
                  break
               case '/negation':
-                setIsSplash(false);
+                setIsCover(false);
                  setPageTitle('negation')
                  setChapter('3')
                  break
               case '/alienation':
-                setIsSplash(false);
+                setIsCover(false);
                  setPageTitle('Alienation')
                  setChapter('4')
                  break
               case '/homogenization':
-                setIsSplash(false);
+                setIsCover(false);
                  setPageTitle('homogenization')
                  setChapter('5')
                  break
               case '/credits':
-                 setIsSplash(true);
+                 setIsCover(true);
                  setPageTitle('Credits')
                  break
              default:
@@ -74,14 +74,14 @@ function App() {
       <div className='overlay'></div>
       <MenuDrawer/>
       <Routes>
-        <Route path="/" element={<SplashPage/>}/>
+        <Route path="/" element={<CoverPage/>}/>
         <Route path='/fragmentation' element={<Fragmenatation/>} />
         <Route path='/commodification' element={<Commodification/>} />
         <Route path='/negation' element={<Negation/>} />
         <Route path='/alienation' element={<Alienation/>} />
         <Route path='/homogenization' element={<Homogenization/>} />
       </Routes>
-      <div className={isSplash ? 'hidden' : ''}>
+      <div className={isCover ? 'hidden' : ''}>
         <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
       </div>
     </div>
