@@ -9,45 +9,60 @@ import Alienation from './pages/Alienation';
 import Homogenization from './pages/Homogenization';
 
 import { MenuDrawer } from './components/MenuDrawer';
+import SplashPage from './pages/Splash';
 
 function App() {
-  const [shift, setShift] = useState(false);
-  function upShift() {
-    setShift(!shift);
-  }
+  const [isSplash, setIsSplash] = useState<boolean>(false);
   const [pageTitle, setPageTitle]= useState<string>('Fragmentation');
-  const [slug, setSlug]= useState<string>('Fragmentation');
+  const [slug, setSlug]= useState<string>('');
   const [chapter, setChapter] = useState<string>()
   const location = useLocation();
 
   useEffect(() => {
-      getURL();
- },[location])
+    
+    getURL();
+    console.log(slug)
+    window.scrollTo(0, 0)
+  },[location.pathname])
 
+  useEffect (() => {
+      
+      
+  },[])
+  
  const getURL = () => {
-     setSlug(window.location.pathname);
-     switch (slug) {
-             case '/':
+  setSlug(location.pathname);
+    switch (slug) {
+              case '/':
+                setIsSplash(true);
+                break
+              case '/fragmentation':
+                setIsSplash(false);
                  setPageTitle('fragmentation')
                  setChapter('1')
                  break
-             case '/commodification':
+              case '/commodification':
+                setIsSplash(false);
                  setPageTitle('commodification');
                  setChapter('2')
                  break
-             case '/negation':
+              case '/negation':
+                setIsSplash(false);
                  setPageTitle('negation')
                  setChapter('3')
                  break
-             case '/alienation':
+              case '/alienation':
+                setIsSplash(false);
                  setPageTitle('Alienation')
                  setChapter('4')
                  break
-             case '/homogenization':
+              case '/homogenization':
+                setIsSplash(false);
                  setPageTitle('homogenization')
                  setChapter('5')
                  break
-             case '/credits':
+              case '/credits':
+                 setIsSplash(true);
                  setPageTitle('Credits')
                  break
              default:
@@ -59,13 +74,16 @@ function App() {
       <div className='overlay'></div>
       <MenuDrawer/>
       <Routes>
-        <Route path='/' element={<Fragmenatation/>} />
+        <Route path="/" element={<SplashPage/>}/>
+        <Route path='/fragmentation' element={<Fragmenatation/>} />
         <Route path='/commodification' element={<Commodification/>} />
         <Route path='/negation' element={<Negation/>} />
         <Route path='/alienation' element={<Alienation/>} />
         <Route path='/homogenization' element={<Homogenization/>} />
       </Routes>
-      <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
+      <div className={isSplash ? 'hidden' : ''}>
+        <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
+      </div>
     </div>
   );
 }
