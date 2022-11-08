@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const MenuDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const chapters = [
-    { name: "cover", link: '/'},
+    { link: '/', name: "Cover"},
     { name: "chapter 1", subtitle: "Fragmentation", link: '/fragmentation' },
     { name: "chapter 2", subtitle: "Commodification", link: '/commodification' },
     { name: "chapter 3", subtitle: "Negation", link: '/negation' },
