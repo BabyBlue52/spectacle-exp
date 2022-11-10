@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton } from "../components/Buttons";
-import ToastMessage from "../components/ToastMessage";
+
 
 function Fragmenatation() {
     const head = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169571/spectacular/marmalade_head_hzfaox.png';
@@ -92,7 +92,6 @@ function Fragmenatation() {
     
     return (
         <div className="page manila">
-            <ToastMessage/>  
             <div className="fragmentation"> 
                 <div className="text-content">
                     <div className="blurb" >

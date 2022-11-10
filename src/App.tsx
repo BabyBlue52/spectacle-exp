@@ -11,6 +11,7 @@ import Homogenization from './pages/Homogenization';
 import { MenuDrawer } from './components/MenuDrawer';
 import CoverPage from './pages/Cover';
 import CreditsPage from './pages/Credits';
+import ToastMessage from './components/ToastMessage';
 
 function App() {
   const [isCover, setIsCover] = useState<boolean>(false);
@@ -78,6 +79,9 @@ function App() {
       </Routes>
       <div className={isCover ? 'hidden' : ''}>
         <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
+      </div>
+      <div className={isCover ? 'hidden' : ''}>
+        <ToastMessage/>
       </div>
     </div>
   );
