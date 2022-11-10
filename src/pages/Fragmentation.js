@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton } from "../components/Buttons";
-
+import ToastMessage from "../components/ToastMessage";
 
 function Fragmenatation() {
     const head = 'https://res.cloudinary.com/dzaaowrv5/image/upload/v1662169571/spectacular/marmalade_head_hzfaox.png';
@@ -22,9 +22,9 @@ function Fragmenatation() {
     
     /* Track scroll position */
     useEffect(() =>
-          yRange.onChange((v) => {
+        yRange.onChange((v) => {
             setCurrentPercent(Math.trunc(yRange.current))
-          }
+        }
     ),[yRange]);
 
     /* Secondary event listener for change in scroll position */
@@ -35,7 +35,9 @@ function Fragmenatation() {
         return () => {
           clearTimeout(loop);
         };
+        
     })
+    
     // Check to see where User scroll is    
     function getPosition() {
         if ( yRange.current < 20 ) {
@@ -87,9 +89,10 @@ function Fragmenatation() {
             transition: { duration: 2, delay: 2 },
         }
     }
-
+    
     return (
         <div className="page manila">
+            <ToastMessage/>  
             <div className="fragmentation"> 
                 <div className="text-content">
                     <div className="blurb" >

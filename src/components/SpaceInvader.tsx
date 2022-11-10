@@ -48,7 +48,7 @@ export default function SpaceInvader() {
             }}
             onHoverEnd={(e) => {
               releaseMe();
-            }}
+            }} 
             onTap={(e) => {
               strike();
             }}

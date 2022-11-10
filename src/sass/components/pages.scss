@@ -20,7 +20,10 @@
     @extend .page;
     background: $tin;
 }
-
+.black {
+    @extend .page;
+    background: $black;
+}
 .fragmentation {
     position: fixed;
     top: 50%;
@@ -239,5 +242,84 @@
         text-align: center;
         text-transform: uppercase;   
         letter-spacing: 3px;
+    }
+    //Scroll Animation
+    .scroll-container{
+        position: fixed;
+        bottom: 2%;
+        left: calc(50vw - 150px);
+        width: 300px;
+        height: 200px;
+        
+        .scroll-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: $black;
+            margin-left: -4px;
+            top: 36%;
+            left: 50%;
+            border-radius: 4px;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-name: scrollMouse;
+        }
+        .icon-scroll {
+            position: relative;
+            width: 40px;
+            height: 70px;
+            margin-left: -20px;
+            top: 50%;
+            left: 50%;
+            margin-top: -35px;
+            box-shadow: inset 0 0 0 1px $black;
+            border-radius: 25px;
+        }    
+    }
+
+    @keyframes scrollMouse {
+    0% { 
+        opacity: 1;
+        }
+    100% {
+        
+        opacity: 0;
+        transform: translateY(36px);
+    }
+    }
+}
+.credits {
+    z-index: 998;
+    img {
+        position: fixed;
+        top: 30vh;
+        left: 10vw;
+        width: 33%;
+        border: 10px solid white;
+        transition: $slow;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 12px rgba($black, 0.33);
+            transition: $slow;
+        }
+    }
+    
+
+    div.content-wrapper{
+        position: fixed;
+        top: 15%;
+        right: 10%;
+        background: rgba($black, 0.85);
+        width: 33vw;
+        max-width: 650px;
+        height: 70vh;
+        border-radius: 10px;
+        padding: 20px 40px;
+        h1 {
+            color: $manila;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $manila;
+        }
     }
 }

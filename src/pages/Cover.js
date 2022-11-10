@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ScrollAnimation from '../animations/ScrollAnimation';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import svg from '../icon/society.svg';
+import svg from '../img/society.svg';
 
 function CoverPage () {
     const [hidden, setHidden] = useState(false);

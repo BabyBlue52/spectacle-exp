@@ -10,6 +10,7 @@ import Homogenization from './pages/Homogenization';
 
 import { MenuDrawer } from './components/MenuDrawer';
 import CoverPage from './pages/Cover';
+import CreditsPage from './pages/Credits';
 
 function App() {
   const [isCover, setIsCover] = useState<boolean>(false);
@@ -19,16 +20,9 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    
     getURL();
-    console.log(slug)
     window.scrollTo(0, 0)
   },[location.pathname])
-
-  useEffect (() => {
-      
-      
-  },[])
   
  const getURL = () => {
   setSlug(location.pathname);
@@ -80,6 +74,7 @@ function App() {
         <Route path='/negation' element={<Negation/>} />
         <Route path='/alienation' element={<Alienation/>} />
         <Route path='/homogenization' element={<Homogenization/>} />
+        <Route path='/credits' element={<CreditsPage/>} />
       </Routes>
       <div className={isCover ? 'hidden' : ''}>
         <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>

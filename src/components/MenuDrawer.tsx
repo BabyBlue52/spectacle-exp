@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 export const MenuDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const chapters = [
-    { link: '/', name: "Cover"},
+    { name: "Cover", link: '/' },
     { name: "chapter 1", subtitle: "Fragmentation", link: '/fragmentation' },
     { name: "chapter 2", subtitle: "Commodification", link: '/commodification' },
     { name: "chapter 3", subtitle: "Negation", link: '/negation' },
     { name: "chapter 4", subtitle: "Alienation", link: '/alienation' },
     { name: "chapter 5", subtitle: "Homogenization", link: '/homogenization' },
-    { name: "credits" }
+    { name: "credits", link: '/credits'}
   ];
 
   const slideIn = {

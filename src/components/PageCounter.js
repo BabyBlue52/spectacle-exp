@@ -2,20 +2,20 @@ import React, { useEffect, useState } from "react";
 import FlipNumbers from "react-flip-numbers";
 import { useLocation } from 'react-router-dom';
 export default (props) => {
-  const [slug, setSlug]= useState('Fragmentation');  
+  const [slug, setSlug]= useState('');  
   const [chapter, setChapter] = useState('1')
-
+  const [isCredits, setIsCredits] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
+    setSlug(location.pathname);
     getURL();
- },[location])
+ },[location.pathname])
 
  const getURL = () => {
-  
-     setSlug(window.location.pathname);
+    //  window.alert(slug)
      switch (slug) {
-             case '/':
+             case '/fragmentation':
                  setChapter('1')
                  break
              case '/commodification':
@@ -31,17 +31,19 @@ export default (props) => {
                  setChapter('4')
                  break
              case '/homogenization':
-                 
+              
                  setChapter('5')
                  break
              case '/credits':
-                 break
+                
+                setIsCredits(true)
+                break
              default:
                  break
          }
  }
   return (
-    <div className="page-counter">
+    <div className={isCredits ? "hidden" : "page-counter"}>
       <FlipNumbers
         height={21}
         width={21}
