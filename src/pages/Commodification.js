@@ -29,6 +29,8 @@ function Commodification() {
     const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
     
     const [textReveal, setTextReveal] = useState(false);
+    const [textReveal2, setTextReveal2] = useState(false);
+    const [textReveal3, setTextReveal3] = useState(false);
 
     /* Track scroll position */
     useEffect(() =>
@@ -50,10 +52,18 @@ function Commodification() {
     function getPosition() {
         if ( yRange.current < 20 ) {
             setTextReveal(false)
-        } else if  (yRange.current > 20) {
+            setTextReveal2(false)
+            setTextReveal3(false)
+        }
+        if  (yRange.current > 20) {
             setTextReveal(true)
         }
-
+        if  (yRange.current > 35) {
+            setTextReveal2(true)
+        }
+        if  (yRange.current > 50) {
+            setTextReveal3(true)
+        }
     }    
 
     const  textAnimation = {
@@ -64,20 +74,22 @@ function Commodification() {
         reveal: {
             opacity: 1,
             transition: { duration: 2 }
-        },
-        delayed: {
-            opacity: 1,
-            transition: { duration: 2, delay: 2 },
         }
     }
 
     return(
         <div className="page sunset">
             <div className="commodification"> 
-            <div className="text-content">
-                    <div className="blurb" >
+                <div className="text-content">
+                    <div className="blurb row">
                         <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>reveal</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                        <motion.div variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                        <motion.div variants={textAnimation} animate={textReveal3 ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
                         </motion.div>
                     </div>
                 </div>
@@ -91,7 +103,7 @@ function Commodification() {
                     </div>
                 </div>
              </div>
-             
+                        
              <ScrollProgress/>
              <Link to="/negation">
                 <NextButton/>

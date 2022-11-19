@@ -40,7 +40,7 @@ function Negation () {
          if (yRange.current > 20) {
              setTextReveal(true)
              setShowNext(false)
-         } if ( yRange.current > 90) {
+         } if ( yRange.current > 80) {
             setShowNext(true);
          }
  
@@ -54,10 +54,6 @@ function Negation () {
          reveal: {
              opacity: 1,
              transition: { duration: 2 }
-         },
-         delayed: {
-             opacity: 1,
-             transition: { duration: 2, delay: 2 },
          }
      }
 
@@ -65,7 +61,7 @@ function Negation () {
         <div className='page tin'>
             <CursorTracker/>        
             {/* Turbulence */}
-            <div>
+            <div className='negation'>
                 <div className='wave-container'>
                     <div className='left'>
                         <Ripple/>    
@@ -74,8 +70,21 @@ function Negation () {
                         <Ripple/>    
                     </div>
                 </div>
-            </div>
 
+                <div className='text-content'>
+                    <div className="blurb">
+                        <motion.div className="left" variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                        <motion.div className="right" variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+           
             <ScrollProgress/>
             {/* Reveal nexxt button */}
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>

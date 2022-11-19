@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import ScrollProgress from "../components/ScrollProgress";
-import { NextButton, PrevButton } from "../components/Buttons";
+import { EndButton, PrevButton } from "../components/Buttons";
 import { Pixelation } from '../components/Pixelation';
 
 function Homogenization () {
@@ -14,6 +14,9 @@ function Homogenization () {
     const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
     
     const [textReveal, setTextReveal] = useState(false);
+    const [textReveal2, setTextReveal2] = useState(false);
+    const [textReveal3, setTextReveal3] = useState(false);
+
     const [showNext, setShowNext] = useState(false);
     const [pixelRatio, setPixelRatio] = useState(0);
 
@@ -46,12 +49,14 @@ function Homogenization () {
             setPixelRatio(5)
         }
         if (yRange.current > 50) {
+            setTextReveal2(true)
             setPixelRatio(10)
         }
         if (yRange.current > 75) {
+            setTextReveal3(true)
             setPixelRatio(15)
         }
-         if ( yRange.current > 90) {
+         if ( yRange.current > 80) {
            setShowNext(true);
         }
 
@@ -78,8 +83,28 @@ function Homogenization () {
         <div className='page tin'>
             <div className="homogenization">
                 <Pixelation blur={pixelRatio}/>
+            
+                <div className="text-content">
+                    <div className="blurb row">
+                        <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                        <motion.div variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                        <motion.div variants={textAnimation} animate={textReveal3 ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                    </div>
+                </div>
             </div>
             <ScrollProgress/>
+            <Link to="/Alienation">
+                <PrevButton/>
+            </Link>
+            <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
+                <Link to="/credits"><EndButton/></Link>
+            </motion.div>
        </div>
     )
 }

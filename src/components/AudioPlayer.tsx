@@ -23,6 +23,23 @@ export default function AudioPlayer() {
     setIsPlaying(false);
   };
 
+  // Keyboard Shourtcuts
+  React.useEffect(() => {
+    const handle = (e: { code: string; }) => {
+      if (e.code === "KeyP") {
+        setIsPlaying(!isPlaying);
+      } else {
+        return
+      }
+    };
+
+    window.addEventListener("keydown", handle);
+    return () => {
+      // On unmount
+      window.removeEventListener("keydown", handle);
+    };
+  }, [isPlaying]);
+  
   const Line = () => {
     return (
       <div className="line">
@@ -36,7 +53,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="audio-wrapper">
+    <div className="audio-wrapper _dropShadow">
       <ReactPlayer
         url={url}
         playing={isPlaying}

@@ -22,3 +22,14 @@ export const PrevButton = () => {
         </div>
     )
 }
+
+export const EndButton = () => {
+    return (
+        <div>
+            <button className='end-btn' style={{'right': '20px'}}>  
+                <p>end</p>
+                <span><BsArrowRight/></span>
+            </button>
+        </div>
+    )
+}

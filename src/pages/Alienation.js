@@ -16,6 +16,7 @@ function Alienation () {
      const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
      
      const [textReveal, setTextReveal] = useState(false);
+     const [textReveal2, setTextReveal2] = useState(false);
      const [showNext, setShowNext] = useState(false);
      /* Track scroll position */
      useEffect(() =>
@@ -41,7 +42,10 @@ function Alienation () {
          if (yRange.current > 20) {
              setTextReveal(true)
              setShowNext(false)
-         } if ( yRange.current > 90) {
+         }
+         if (yRange.current > 50) {
+            setTextReveal2(true)
+        } if ( yRange.current > 80) {
             setShowNext(true);
          }
  
@@ -67,8 +71,30 @@ function Alienation () {
             <SpaceInvader/>
             <div className="alienation">
                 <img src={theDumps} className="unhappy"/>
+                <div className='text-content'>
+                    <div className="blurb">
+                        <motion.div className="left" variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                        <motion.div className="right" variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        </motion.div>
+                    </div>
+                </div>
             </div>
             <ScrollProgress/>
+            {/* Reveal nexxt button */}
+            <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
+                <Link to="/homogenization">
+                    <NextButton/>
+                </Link>
+            </motion.div>
+
+             <Link to="/negation">
+                <PrevButton/>
+             </Link>
         </div>
     ) 
 }

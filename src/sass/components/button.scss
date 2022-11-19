@@ -36,9 +36,11 @@ button.next-btn {
 }
 
 button.prev-btn {
-    @extend button.next-btn;
+  @extend button.next-btn;
 }
-
+button.end-btn {
+  @extend button.prev-btn;
+}
 button.menu-btn {
     z-index: 9999;
     position: fixed;
