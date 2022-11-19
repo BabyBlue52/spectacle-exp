@@ -32,7 +32,7 @@ export const MenuDrawer = () => {
   };
 
   const locked = {
-    opacity: .33,
+    opacity: .5,
   }
 
   const unlocked = {
