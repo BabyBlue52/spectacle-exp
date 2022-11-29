@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import ReactPlayer from "react-player"; 
 
 export default function SpaceInvader() {
   const [struggle, setStruggle] = useState(false);
   const [stun, setStun] = useState(false);
 
   const spaceShip = "https://res.cloudinary.com/dzaaowrv5/image/upload/v1665628394/spectacular/tumblr_pq0aw3S3x91x6m6njo1_1280_copy_tnrndi.png"
-
+  const boop = "https://res.cloudinary.com/dzaaowrv5/video/upload/v1669683075/spectacular/344310__musiclegends__laser-shoot_zxldag.wav"
+  
   const shipStruggle = () => {
     setStruggle(true);
   };
@@ -16,7 +17,7 @@ export default function SpaceInvader() {
   };
   const strike = () => {
     setStun(true);
-
+    console.log('boop')
     setTimeout(() => {
       setStun(false);
     }, 1000);
@@ -31,6 +32,7 @@ export default function SpaceInvader() {
     ease: "linear",
     repeat: Infinity
   };
+
   return (
     <div>
       <div className="flight-path">
@@ -53,6 +55,12 @@ export default function SpaceInvader() {
               strike();
             }}
           >
+            <div className="hidden">
+              <ReactPlayer 
+                url={boop}
+                playing={stun? true : false} 
+              />
+            </div>
             <img src={spaceShip} />
           </motion.div>
         </motion.div>
