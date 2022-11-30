@@ -5,7 +5,8 @@
     width: calc(100% - 45px);
     margin: 0 10px;
     padding: 0 10px;
-    z-index: 998;
+    z-index: 16;
+    ;
   }
   .box {
     height: 12vw;
@@ -33,6 +34,7 @@
     @extend .flight-path;
     top: calc(12vw + 60px);
     height: 500px;  
+    
   }
   .lightning {
     height: 10vw;

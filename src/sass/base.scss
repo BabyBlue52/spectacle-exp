@@ -25,7 +25,7 @@ p {
 /* Heads Up Display */
 .hud {
     position: relative;
-    z-index: 99;
+    z-index: 15;
 }
 .wrapper {
     margin: 1% auto;
@@ -48,6 +48,31 @@ p {
     height: 7px;
     background: $flame;
     transform-origin: 0%;     
+}
+
+// Loading Animation
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    z-index: 30;   
+    .loading-animation {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: max-content;
+        height: max-content;
+        overflow: hidden;
+        background: inherit;
+        
+        p {
+            text-align: center;
+        }
+    }
 }
 
 
@@ -97,7 +122,7 @@ scrollbar-width: none; /* Firefox */
     top: 0;
     left: 0;
     background: $black;
-    z-index: 999;
+    z-index: 21;
 }
 
 ._dropShadow {

@@ -17,7 +17,6 @@ export default function SpaceInvader() {
   };
   const strike = () => {
     setStun(true);
-    console.log('boop')
     setTimeout(() => {
       setStun(false);
     }, 1000);

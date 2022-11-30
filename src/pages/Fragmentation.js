@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton } from "../components/Buttons";
+import { LoadingBar } from "../components/LoadSpinner";
 
 
 function Fragmenatation() {
@@ -91,7 +92,10 @@ function Fragmenatation() {
     }
     
     return (
+        <div>
+        
         <div className="page manila">
+            <LoadingBar/>    
             <div className="fragmentation"> 
                 <div className="text-content">
                     <div className="blurb" >
@@ -128,6 +132,7 @@ function Fragmenatation() {
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
                 <Link to="/commodification"><NextButton/></Link>
             </motion.div>
+        </div>
         </div>
     )
 }
