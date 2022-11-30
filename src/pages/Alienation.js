@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton, PrevButton } from "../components/Buttons";
 import SpaceInvader from '../components/SpaceInvader';
+import { LoadingBar } from '../components/LoadSpinner';
 
 
 function Alienation () {
@@ -68,6 +69,7 @@ function Alienation () {
 
     return (
         <div className='page manila'>
+            <LoadingBar/>
             <SpaceInvader/>
             <div className="alienation">
                 <img src={theDumps} className="unhappy"/>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ScrollProgress from "../components/ScrollProgress";
 import { EndButton, PrevButton } from "../components/Buttons";
 import { Pixelation } from '../components/Pixelation';
+import { LoadingBar } from '../components/LoadSpinner';
 
 function Homogenization () {
 
@@ -81,6 +82,7 @@ function Homogenization () {
 
    return (
         <div className='page tin'>
+            <LoadingBar/>
             <div className="homogenization">
                 <Pixelation blur={pixelRatio}/>
             

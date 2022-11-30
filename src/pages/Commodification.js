@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton, PrevButton } from "../components/Buttons";
 import { Link } from 'react-router-dom';
+import { LoadingBar } from '../components/LoadSpinner';
 
 function Commodification() {
     const carousel = [
@@ -79,6 +80,7 @@ function Commodification() {
 
     return(
         <div className="page sunset">
+            <LoadingBar/>
             <div className="commodification"> 
                 <div className="text-content">
                     <div className="blurb row">

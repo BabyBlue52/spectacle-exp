@@ -17,7 +17,7 @@ function App() {
   const [isCover, setIsCover] = useState<boolean>(false);
   const [pageTitle, setPageTitle]= useState<string>('Fragmentation');
   const [slug, setSlug]= useState<string>('');
-  const [chapter, setChapter] = useState<string>()
+  const [chapter, setChapter] = useState<string>();
   const location = useLocation();
 
   useEffect(() => {

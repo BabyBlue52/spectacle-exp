@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const MenuDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [pageChange, setpageChange] = useState(false);
   const chapters = [
     { name: "Cover", link: '/' },
     { name: "chapter 1", subtitle: "Fragmentation", link: '/fragmentation' },
@@ -73,10 +74,7 @@ export const MenuDrawer = () => {
       </Link>
     </motion.div>
   ));
-
   
- 
-
   return (
     <>
       {/* Menu Button Toggle */}

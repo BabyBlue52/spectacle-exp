@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { PrevButton } from '../components/Buttons';
 import wiki from '../img/wikipedia.svg';
 import book from '../img/book.svg';
+import { LoadingBar } from '../components/LoadSpinner';
 
 function CreditsPage () {
     const [reveal, setReveal] = useState(false);
@@ -30,6 +31,7 @@ function CreditsPage () {
     }
     return (
         <div className='page'>
+            <LoadingBar/>
             <div className='credits'>
                 <div className='credit-link'>
                     
