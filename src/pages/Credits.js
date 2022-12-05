@@ -31,7 +31,6 @@ function CreditsPage () {
     }
     return (
         <div className='page'>
-            <LoadingBar/>
             <div className='credits'>
                 <div className='credit-link'>
                     

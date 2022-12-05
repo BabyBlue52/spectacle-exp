@@ -6,6 +6,7 @@ import { NextButton, PrevButton } from "../components/Buttons";
 import { Link } from 'react-router-dom';
 import Ripple from '../components/Ripple';
 import CursorTracker from '../components/CursorTracking';
+import { LoadingBar } from '../animations/LoadSpinner';
 
 function Negation () {
     const timeMag = "https://res.cloudinary.com/dzaaowrv5/image/upload/v1664660424/spectacular/05ec98d72cbb5b7d2800112285f8a816_yunmiz.jpg";
@@ -59,6 +60,7 @@ function Negation () {
 
     return (
         <div className='page tin'>
+            <LoadingBar/>
             <CursorTracker/>        
             {/* Turbulence */}
             <div className='negation'>

@@ -61,7 +61,7 @@ function App() {
                  setChapter('5')
                  break
               case '/credits':
-                 setIsCover(true);
+                 setIsCover(false);
                  setPageTitle('Credits')
                  break
              default:
@@ -84,9 +84,7 @@ function App() {
       <div className={isCover ? 'hidden' : ''}>
         <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
       </div>
-      <div className={isCover ? 'hidden' : ''}>
-        <ToastMessage/>
-      </div>
+      <ToastMessage/>
     </div>
   );
 }

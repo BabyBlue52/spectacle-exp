@@ -306,7 +306,8 @@
     }
 }
 .credits {
-    z-index: 10;
+    position: relative;
+    z-index: 16;
     div.credit-link {
         position: fixed;
         top: 30vh;
