@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton } from "../components/Buttons";
-import { LoadingBar } from "../components/LoadSpinner";
+import { LoadingBar } from "../animations/LoadSpinner";
 
 
 function Fragmenatation() {

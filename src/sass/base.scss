@@ -33,13 +33,8 @@ p {
     overflow-y: scroll;
     width: calc(100vw - 80px);
 }
-.circle-text-animation {
-    position: fixed;
-    top: 30px;
-    right: 50px;
-  
-    height: 300px;
-}
+
+
 .progress-bar {
     position: fixed;
     bottom: 0;
@@ -79,7 +74,6 @@ p {
         }
     }
 }
-
 
 .overlay {
     position: fixed;

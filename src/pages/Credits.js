@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { PrevButton } from '../components/Buttons';
 import wiki from '../img/wikipedia.svg';
 import book from '../img/book.svg';
-import { LoadingBar } from '../components/LoadSpinner';
+import { LoadingBar } from '../animations/LoadSpinner';
 
 function CreditsPage () {
     const [reveal, setReveal] = useState(false);

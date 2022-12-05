@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton, PrevButton } from "../components/Buttons";
 import { Link } from 'react-router-dom';
-import { LoadingBar } from '../components/LoadSpinner';
+import { LoadingBar } from '../animations/LoadSpinner';
 
 function Commodification() {
     const carousel = [

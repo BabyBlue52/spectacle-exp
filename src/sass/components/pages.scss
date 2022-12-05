@@ -98,13 +98,7 @@
    display: flex;
    align-items: center; 
 
-    // Animation
-    $animationSpeed: 120s;
-
-    @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 20))}
-    }
+    
     // Styling
     .slider {
         background: transparent;
@@ -309,50 +303,6 @@
         text-align: center;
         text-transform: uppercase;   
         letter-spacing: 3px;
-    }
-    //Scroll Animation
-    .scroll-container{
-        position: fixed;
-        bottom: 2%;
-        left: calc(50vw - 150px);
-        width: 300px;
-        height: 200px;
-        
-        .scroll-dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: $black;
-            margin-left: -4px;
-            top: 36%;
-            left: 50%;
-            border-radius: 4px;
-            animation-duration: 2.5s;
-            animation-iteration-count: infinite;
-            animation-name: scrollMouse;
-        }
-        .icon-scroll {
-            position: relative;
-            width: 40px;
-            height: 70px;
-            margin-left: -20px;
-            top: 50%;
-            left: 50%;
-            margin-top: -35px;
-            box-shadow: inset 0 0 0 1px $black;
-            border-radius: 25px;
-        }    
-    }
-
-    @keyframes scrollMouse {
-    0% { 
-        opacity: 1;
-        }
-    100% {
-        
-        opacity: 0;
-        transform: translateY(36px);
-    }
     }
 }
 .credits {

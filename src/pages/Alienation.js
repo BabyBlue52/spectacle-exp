@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import ScrollProgress from "../components/ScrollProgress";
 import { NextButton, PrevButton } from "../components/Buttons";
 import SpaceInvader from '../components/SpaceInvader';
-import { LoadingBar } from '../components/LoadSpinner';
+import { LoadingBar } from '../animations/LoadSpinner';
 
 
 function Alienation () {
