@@ -66,11 +66,16 @@ p {
         transform: translate(-50%, -50%);
         width: max-content;
         height: max-content;
-        overflow: hidden;
+        // overflow: hidden;
         background: inherit;
         
         p {
+            position: relative;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 10px;
+            left:-8px;
         }
     }
 }

@@ -21,15 +21,6 @@ export default function ScrollProgress() {
 
     [yRange]
   );
-  const pageChecker = () => {
-    if (currentPercent === 100) {
-      console.log("End Page");
-    } else if (currentPercent === 0) {
-      console.log("Start Page");
-    }
-  };
-
-  pageChecker();
 
   return (
     <React.Fragment>

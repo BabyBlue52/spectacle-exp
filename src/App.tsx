@@ -19,12 +19,16 @@ function App() {
   const [slug, setSlug]= useState<string>('');
   const [chapter, setChapter] = useState<string>();
   const location = useLocation();
+  let token
 
   useEffect(() => {
     getURL();
     window.scrollTo(0, 0)
+    
   },[location.pathname])
-  
+
+
+
  const getURL = () => {
   setSlug(location.pathname);
     switch (slug) {

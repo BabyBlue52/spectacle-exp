@@ -4,13 +4,16 @@ import { ReactComponent as Hint } from "../img/hint.svg";
 
 function ToastMessage() {
   const [showHint, setShowHint] = useState<boolean>(false);
+  const [cookie, setCookie] = useState<boolean>(false);
+  let token
 
   useEffect(() => {
-    //Let hint sit for 10 seconds
-
+    checkToken()
+    //Let hint sit for 30 seconds
     setTimeout(() => {
-        dismiss() 
+        dismiss()
     }, 30000);
+    
   }, []);
   const variants = {
     show: { 
@@ -24,6 +27,19 @@ function ToastMessage() {
   };
   const dismiss = () => {
     setShowHint(true);
+    localStorage.setItem('toast dismissed','1'); 
+  }
+
+  const checkToken = () => {
+    token = localStorage.getItem('toast dismissed')
+    if(token === '1') {
+      setCookie(true);
+    }
+  }
+  if(cookie) {
+    return (
+      <div/>
+    )
   }
   return (
     <motion.div
