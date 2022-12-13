@@ -8,6 +8,10 @@ export default (props) => {
   const location = useLocation();
 
   useEffect(() => {
+    getURL();
+  })
+
+  useEffect(() => {
     setSlug(location.pathname);
     getURL();
  },[location.pathname])
@@ -16,22 +20,23 @@ export default (props) => {
     //  window.alert(slug)
      switch (slug) {
              case '/fragmentation':
-                 setChapter('1')
+              setIsCredits(false);   
+                setChapter('1')
                  break
              case '/commodification':
-                 
+                setIsCredits(false); 
                  setChapter('2')
                  break
              case '/negation':
-                 
+                setIsCredits(false);   
                  setChapter('3')
                  break
              case '/alienation':
-                 
+               setIsCredits(false); 
                  setChapter('4')
                  break
              case '/homogenization':
-              
+                setIsCredits(false);
                  setChapter('5')
                  break
              case '/credits':

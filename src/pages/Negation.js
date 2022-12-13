@@ -90,7 +90,7 @@ function Negation () {
             <ScrollProgress/>
             {/* Reveal nexxt button */}
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
-                <Link to="/Alienation">
+                <Link to="/alienation">
                     <NextButton/>
                 </Link>
             </motion.div>

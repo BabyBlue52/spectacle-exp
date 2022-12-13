@@ -17,20 +17,25 @@ function App() {
   const [isCover, setIsCover] = useState<boolean>(false);
   const [pageTitle, setPageTitle]= useState<string>('Fragmentation');
   const [slug, setSlug]= useState<string>('');
-  const [chapter, setChapter] = useState<string>();
+  let [chapter, setChapter] = useState<string>('');
   const location = useLocation();
   let token
 
   useEffect(() => {
     getURL();
-    window.scrollTo(0, 0)
-    
+    // setChapter('')
+  })
+
+  useEffect(() => {
+    getURL();
+    window.scrollTo(0, 0);
   },[location.pathname])
 
-
+  
 
  const getURL = () => {
-  setSlug(location.pathname);
+  setSlug(location.pathname); 
+  
     switch (slug) {
               case '/':
                 setIsCover(true);
@@ -38,27 +43,27 @@ function App() {
               case '/fragmentation':
                 setIsCover(false);
                  setPageTitle('fragmentation')
-                 setChapter('1')
+                 setChapter(chapter = '1')
                  break
               case '/commodification':
                 setIsCover(false);
-                 setPageTitle('commodification');
-                 setChapter('2')
+                 setPageTitle('commodification')
+                 setChapter(chapter = '2')
                  break
               case '/negation':
                 setIsCover(false);
                  setPageTitle('negation')
-                 setChapter('3')
+                 setChapter(chapter = '3')
                  break
               case '/alienation':
                 setIsCover(false);
-                 setPageTitle('Alienation')
-                 setChapter('4')
+                 setPageTitle('alienation')
+                 setChapter(chapter = '4')
                  break
               case '/homogenization':
                 setIsCover(false);
                  setPageTitle('homogenization')
-                 setChapter('5')
+                 setChapter(chapter = '5')
                  break
               case '/credits':
                  setIsCover(false);

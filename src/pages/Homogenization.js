@@ -40,22 +40,24 @@ function Homogenization () {
 
     // Check to see where User scroll is    
     function getPosition() {
-        if ( yRange.current < 25 ) {
+        if ( yRange.current < 20 ) {
             setTextReveal(false)
+            setTextReveal2(false)
+            setTextReveal3(false)
             setPixelRatio(0)
         }
-        if (yRange.current > 25) {
+        if (yRange.current > 40) {
             setTextReveal(true)
             setShowNext(false)
             setPixelRatio(5)
         }
-        if (yRange.current > 50) {
+        if (yRange.current > 60) {
             setTextReveal2(true)
             setPixelRatio(10)
         }
-        if (yRange.current > 75) {
+        if (yRange.current > 80) {
             setTextReveal3(true)
-            setPixelRatio(15)
+            setPixelRatio(20)
         }
          if ( yRange.current > 80) {
            setShowNext(true);
@@ -101,7 +103,7 @@ function Homogenization () {
                 </div>
             </div>
             <ScrollProgress/>
-            <Link to="/Alienation">
+            <Link to="/alienation">
                 <PrevButton/>
             </Link>
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>

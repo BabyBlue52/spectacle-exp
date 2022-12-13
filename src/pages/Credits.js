@@ -15,7 +15,7 @@ function CreditsPage () {
     useEffect(() => {
         setTimeout(() => {
             setReveal(true)
-        }, 100)
+        }, 750)
         
     })
     const variants = {

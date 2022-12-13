@@ -110,7 +110,7 @@ function Commodification() {
              <Link to="/negation">
                 <NextButton/>
              </Link>
-             <Link to="/">
+             <Link to="/fragmentation">
                 <PrevButton/>
              </Link>
         </div>
