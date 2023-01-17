@@ -311,9 +311,9 @@
     div.credit-link {
         position: fixed;
         top: 30vh;
-        left: 25vh;
+        left: 25vw;
         img.photo {
-            width: 33%;
+            width: 20vw;
             border: 1.5vh solid white;
         }
         img.pin {
@@ -326,7 +326,7 @@
         .author {
             transform: scale(0.9);
             justify-content: flex-start;
-            width: 34%;
+            width: 100%;
             padding-top: 20px;
             padding-left: 0px;
             img.svg {
@@ -368,13 +368,11 @@
     }
     div.content-wrapper{
         position: fixed;
-        top: 15%;
-        right: 10%;
-        background: rgba($black, 0.85);
-        width: 33vw;
-        max-width: 650px;
-        height: 70vh;
-        border-radius: 10px;
+        top: 0%;
+        right: 200px;
+        background: $black;
+        width: 20vw;
+        height: 100vh;
         padding: 20px 40px;
         overflow-y: scroll;
         h1 {
@@ -384,8 +382,14 @@
             border-bottom: 1px solid $manila;
         }
         p { 
-            color: $tin;
-            margin: 0; 
+            text-overflow: ellipsis;
+            white-space: normal;
+            color: #D3D5D6;
+            margin: 0;
+            margin-left: 20px;
+            width: 300px;
+            overflow: hidden;
+        
             span {
                 margin-right: 10px;
             }
@@ -396,6 +400,9 @@
             margin: 10px 0;
             color: $tin;
             &:hover {color: $flame}
+        }
+        .link-set {
+            margin-bottom: 40px;
         }
     }
     

@@ -55,7 +55,8 @@ export default function SpaceInvader() {
             }}
           >
             <div className="hidden">
-              <ReactPlayer 
+              <ReactPlayer
+                volume={0.5} 
                 url={boop}
                 playing={stun? true : false} 
               />

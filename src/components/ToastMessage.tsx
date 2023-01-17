@@ -27,7 +27,7 @@ function ToastMessage() {
   };
   const dismiss = () => {
     setShowHint(true);
-    localStorage.setItem('toast dismissed','1'); 
+    // localStorage.setItem('toast dismissed','1'); 
   }
 
   const checkToken = () => {

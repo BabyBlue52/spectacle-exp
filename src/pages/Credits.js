@@ -55,15 +55,26 @@ function CreditsPage () {
                         </a>
                     </div>
                 </div>
-                
-                <motion.div className='content-wrapper' variants={variants} animate={reveal ? 'show': 'hide'}>
+                <div className='content-wrapper'>
                     <h1>Credits</h1>
-                    <p>Negation</p>
-                    <a href="https://www.flickr.com/photos/13476480@N07/7635043238" target="_blank" rel="noreferrer">
-                        
-                        <p><span>[1]</span>https://www.flickr.com/photos/13476480@N07/7635043238</p>
-                    </a>
-                </motion.div>
+                    <motion.div variants={variants} animate={reveal ? 'show': 'hide'}>
+                        <div className='link-set'>
+                            <p><strong>Negation</strong></p>
+                            <a href="https://www.flickr.com/photos/13476480@N07/7635043238" target="_blank" rel="noreferrer">
+                                <p><span>[1]</span>https://www.flickr.com/photos/13476480@N07/7635043238</p>
+                            </a>
+                        </div>
+                        <div className='link-set'>
+                            <p><strong>Alienation</strong></p>
+                            <a href="https://ultrakillblast.com/post/184203268843/earth-vs-the-flying-saucers-1956" target="_blank" rel="noreferrer">
+                                <p><span>[1]</span>https://ultrakillblast.com/post/184203268843/earth-vs-the-flying-saucers-1956</p>
+                            </a>
+                            <a href="https://fineartamerica.com/featured/1960s-unhappy-sad-depressed-woman-vintage-images.html" target="_blank" rel="noreferrer">
+                                <p><span>[2]</span>https://fineartamerica.com/featured/1960s-unhappy-sad-depressed-woman-vintage-images.html</p>
+                            </a>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
             <Link to="/homogenization">
                 <PrevButton/>

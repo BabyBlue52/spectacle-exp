@@ -12,6 +12,7 @@ import { MenuDrawer } from './components/MenuDrawer';
 import CoverPage from './pages/Cover';
 import CreditsPage from './pages/Credits';
 import ToastMessage from './components/ToastMessage';
+import shades from './img/shades.svg';
 
 function App() {
   const [isCover, setIsCover] = useState<boolean>(false);
@@ -74,7 +75,8 @@ function App() {
          }
  }
   return (
-    <div>
+    <>
+    <div className='app'>
       <div className='overlay'></div>
       <MenuDrawer/>
       <Routes>
@@ -91,6 +93,20 @@ function App() {
       </div>
       <ToastMessage/>
     </div>
+    <div className='detect-mobile'>
+      <img className='jack' src='https://res.cloudinary.com/dzaaowrv5/image/upload/v1673929863/spectacular/sorryJack_lj8d5y.png' />
+      <div className='centered'>
+        <div className='content'>
+          <div>
+            <img src={shades}/>
+          </div>
+          <h1> Sorry, jack...</h1>
+          <p> This device is to small to display <br/> <span>Society of The Spectacle.</span></p>  
+          <p> Please try again on a desktop screen at least <i>1024px</i> wide, ya dig?</p>
+        </div>
+      </div>
+    </div>
+    </>
   );
 }
 
