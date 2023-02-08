@@ -19,19 +19,32 @@ function App() {
   const [pageTitle, setPageTitle]= useState<string>('Fragmentation');
   const [slug, setSlug]= useState<string>('');
   let [chapter, setChapter] = useState<string>('');
+  const [width, setWidth] = useState(window.innerWidth);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const location = useLocation();
-  let token
+  
 
   useEffect(() => {
+    
     getURL();
-    // setChapter('')
+    window.addEventListener("resize", detectMobile);
+    setWidth(window.innerWidth)
+    detectMobile();
   })
 
   useEffect(() => {
     getURL();
+    
     window.scrollTo(0, 0);
   },[location.pathname])
 
+  const detectMobile = () => {
+    if((window.innerWidth < 900)) {    
+      setIsMobile(true);
+    } else {
+      setIsMobile(false)
+    }
+  }
   
 
  const getURL = () => {
@@ -74,40 +87,46 @@ function App() {
                  break
          }
  }
-  return (
-    <>
-    <div className='app'>
-      <div className='overlay'></div>
-      <MenuDrawer/>
-      <Routes>
-        <Route path="/" element={<CoverPage/>}/>
-        <Route path='/fragmentation' element={<Fragmenatation/>} />
-        <Route path='/commodification' element={<Commodification/>} />
-        <Route path='/negation' element={<Negation/>} />
-        <Route path='/alienation' element={<Alienation/>} />
-        <Route path='/homogenization' element={<Homogenization/>} />
-        <Route path='/credits' element={<CreditsPage/>} />
-      </Routes>
-      <div className={isCover ? 'hidden' : ''}>
-        <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
+  if(!isMobile){
+    return (
+      <>
+      <div className='app'>
+        <div className='overlay'></div>
+        <MenuDrawer/>
+        <Routes>
+          <Route path="/" element={<CoverPage/>}/>
+          <Route path='/fragmentation' element={<Fragmenatation/>} />
+          <Route path='/commodification' element={<Commodification/>} />
+          <Route path='/negation' element={<Negation/>} />
+          <Route path='/alienation' element={<Alienation/>} />
+          <Route path='/homogenization' element={<Homogenization/>} />
+          <Route path='/credits' element={<CreditsPage/>} />
+        </Routes>
+        <div className={isCover ? 'hidden' : ''}>
+          <HUD chapter={chapter} pageTitle={pageTitle} pageNumber={chapter}/>
+        </div>
+        <ToastMessage/>
       </div>
-      <ToastMessage/>
-    </div>
-    <div className='detect-mobile'>
-      <img className='jack' src='https://res.cloudinary.com/dzaaowrv5/image/upload/v1673929863/spectacular/sorryJack_lj8d5y.png' />
-      <div className='centered'>
-        <div className='content'>
-          <div>
-            <img src={shades}/>
+      
+      </>
+    ); 
+  } return (
+      <>
+      <div className='detect-mobile'>
+        <img className='jack' src='https://res.cloudinary.com/dzaaowrv5/image/upload/v1673929863/spectacular/sorryJack_lj8d5y.png' />
+        <div className='centered'>
+          <div className='content'>
+            <div>
+              <img src={shades}/>
+            </div>
+            <h1> Sorry, jack...</h1>
+            <p> This device is to small to display <br/> <span>Society of The Spectacle.</span></p>  
+            <p> Please try again on a desktop screen at least <i>1024px</i> wide, ya dig?</p>
           </div>
-          <h1> Sorry, jack...</h1>
-          <p> This device is to small to display <br/> <span>Society of The Spectacle.</span></p>  
-          <p> Please try again on a desktop screen at least <i>1024px</i> wide, ya dig?</p>
         </div>
       </div>
-    </div>
-    </>
-  );
+      </>
+    )  
 }
 
 export default App;
