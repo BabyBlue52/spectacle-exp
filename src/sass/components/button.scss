@@ -36,10 +36,10 @@ button.next-btn {
 }
 
 button.prev-btn {
-  @extend button.next-btn;
+  @extend .next-btn;
 }
 button.end-btn {
-  @extend button.prev-btn;
+  @extend .prev-btn;
 }
 button.menu-btn {
     z-index: 23;
