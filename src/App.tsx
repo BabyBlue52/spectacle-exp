@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Link } from 'react-router-dom';
 
 import HUD from './components/HUD';
 import Fragmenatation from './pages/Fragmentation';
@@ -116,12 +116,13 @@ function App() {
         <img className='jack' src='https://res.cloudinary.com/dzaaowrv5/image/upload/v1673929863/spectacular/sorryJack_lj8d5y.png' />
         <div className='centered'>
           <div className='content'>
-            <div>
-              <img src={shades}/>
-            </div>
+            <img src={shades}/>
             <h1> Sorry, jack...</h1>
             <p> This device is to small to display <br/> <span>Society of The Spectacle.</span></p>  
             <p> Please try again on a desktop screen at least <i>1024px</i> wide, ya dig?</p>
+            <a href="https://chrishennemann.xyz">
+              <button className='resume'>Check Out my website</button>
+            </a>
           </div>
         </div>
       </div>

@@ -73,3 +73,22 @@ button.menu-btn.invert {
       }
     }
   }
+button.resume {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  border: none;
+  border-bottom: 4px solid $black;
+  border-radius: 20px;
+  background: $manila;
+  color: $black;
+  font-family: $rosignBold;
+  font-size: $subtitle;
+  transition: $smooth;
+  &:focus {
+    background: $black;
+    color: $manila;
+    border-bottom: 4px solid $manila;
+    transition: $smooth;
+  }
+}

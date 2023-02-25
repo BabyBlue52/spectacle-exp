@@ -150,8 +150,15 @@ scrollbar-width: none; /* Firefox */
             z-index: 9;
             position: absolute;
             bottom: 0;
-            left: -10%;
-            height: 40vh;
+            left: -20%;
+            height: 33vh;
+            animation: slide-in;
+            animation-duration: 2s;
+            animation-delay: 750ms;
+        }
+        @keyframes slide-in {
+            from { left: -100%;}
+            to { left: -20%;}
         }
         div.centered {
             position: absolute;
@@ -165,9 +172,12 @@ scrollbar-width: none; /* Firefox */
             background-color: $flame;
             div.content {
                 overflow: hidden;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
                 position: relative;
-                top: 25%;
-                width: 300px;
+                top: 15%;
+                max-width: 300px;
                 margin: auto;
                 color: $tin;
                 
@@ -191,9 +201,12 @@ scrollbar-width: none; /* Firefox */
                 img {
                     height: 100px;
                     width: 100px;
-                    margin: 0 38%;
+                    margin: 0 auto;
                 }
-                
+                a, a:visited, a:active, a:hover, a:focus {
+                    display: flex;
+                    text-decoration: none;
+                }
             }
         }
         
