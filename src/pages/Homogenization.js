@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useMemo } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { debounce } from 'lodash';
 import ScrollProgress from "../components/ScrollProgress";
 import { EndButton, PrevButton } from "../components/Buttons";
 import { Pixelation } from '../components/Pixelation';
@@ -22,24 +22,18 @@ function Homogenization () {
     const [pixelRatio, setPixelRatio] = useState(0);
 
     /* Track scroll position */
-    useEffect(() =>
-          yRange.onChange((v) => {
-            setCurrentPercent(Math.trunc(yRange.current))
-          }
-    ),[yRange]);
-
-    /* Secondary event listener for change in scroll position */
-    useEffect(() => {
-        let loopInterval = 100
-        let loop = setTimeout(getPosition, loopInterval);
-        // Clear the timeout when unmounting the component :
-        return () => {
-            clearTimeout(loop);
-        };
-    })
+     useEffect(() => {
+        yRange.onChange((v) => {
+          setCurrentPercent(Math.trunc(v))
+          getPosition()
+        })
+      }, [yRange])
+      const getPixelRatio = useMemo(() => {
+        return pixelRatio
+      }, [pixelRatio])
 
     // Check to see where User scroll is    
-    function getPosition() {
+    const getPosition = debounce(() => {
         if ( yRange.current < 20 ) {
             setTextReveal(false)
             setTextReveal2(false)
@@ -48,22 +42,21 @@ function Homogenization () {
         }
         if (yRange.current > 40) {
             setTextReveal(true)
-            setShowNext(false)
-            setPixelRatio(5)
+            setPixelRatio(8)
         }
         if (yRange.current > 60) {
             setTextReveal2(true)
-            setPixelRatio(10)
+            setPixelRatio(16)
         }
         if (yRange.current > 80) {
             setTextReveal3(true)
-            setPixelRatio(20)
+            setPixelRatio(24)
         }
          if ( yRange.current > 80) {
            setShowNext(true);
         }
 
-    }    
+    }, 100)    
 
     const  textAnimation = {
         hide: {
