@@ -110,7 +110,7 @@ function Fragmenatation() {
                                 <div className="right">
                                 <p> reference to the image and setting from which they have been carefully crafted and sold to the public.</p>
                                 <p>The most common response is loyalty. A tithe paid to these commodities as a way of no longer having to consider the wide array of options for any and all objects of desire. </p>
-                                <p>A <i>society of the spectacle</i> is asleep to the fact that its bedrock is the fragmenting economy. Classes, sub-classes, imaginary lines drawn in the sand, while the beach is eroded away. The spectacle lapping at the shores ready to washaway and redefine the landscape as per the whims of a fickle mass market.</p>
+                                <p>A <span style={{"display":"contents"}}>society of the spectacle</span> is asleep to the fact that its bedrock is the fragmenting economy. Classes, sub-classes, imaginary lines drawn in the sand, while the beach is eroded away. The spectacle lapping at the shores ready to washaway and redefine the landscape as per the whims of a fickle mass market.</p>
                                 </div>
                         </motion.div>
                     </div>
