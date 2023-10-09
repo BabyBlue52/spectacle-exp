@@ -101,17 +101,16 @@ function Fragmenatation() {
                     <div className="blurb" >
                         <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
                             <div className="left">
-                                <p>The Commodity takes all of the human wants and desires which are made into an objects of attaining to simulate that lifestyle.</p> 
-                                <p>Neque convallis a cras semper auctor neque vitae tempus quam. Semper auctor neque vitae tempus quam pellentesque nec nam. At lectus urna duis convallis convallis. Cras ornare arcu dui vivamus arcu. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Arcu dictum varius duis at consectetur. Eu facilisis sed odio morbi quis. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vulputate mi sit amet mauris commodo. Tristique senectus et netus et malesuada fames ac turpis. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Quam id leo in vitae turpis massa.</p>
-                                <p>Egestas diam in arcu cursus euismod. Ut placerat orci nulla pellentesque dignissim enim. Penatibus et magnis dis parturient. Massa tincidunt dui ut ornare lectus. Elit duis tristique sollicitudin nibh sit amet. Nisl tincidunt eget nullam non nisi est sit. Sed ullamcorper morbi tincidunt ornare massa eget. In pellentesque massa placerat duis ultricies lacus sed turpis. Orci dapibus ultrices in iaculis nunc sed augue. Pellentesque dignissim enim sit amet. Sed adipiscing diam donec adipiscing tristique. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Id nibh tortor id aliquet lectus proin.</p>
+                                <p>The spectacle shatters larger illusions and the pieces cannot be reassembled. An economy or market is a good example. Commerce of one item is categorized and cataloged into an industry, bound to compete only with like objects.</p> 
+                                <p>These shards mirror the way a fragmented populace relates to each other, in reference, in mere signs. One’s life is separated into segments: work/leisure, hobby/career, week/weekend. This bifurcation applies on different orders of magnitude. The spectacle conjures “being” into “having.</p>
+                                <p>What does one’s possessions say about them? How do they fit together to for a grander, holistic self? Even as trivial as shoe choice conveys a personality trait on the wearer. They come as</p>
                             </div>
                         </motion.div>
                         <motion.div variants={textAnimation} animate={textReveal ? 'delayed' : 'hide'}>
                                 <div className="right">
-                                <p> It shatters these realities to reconstruct in its own narrative form. a cohesion in which dissidence is swiftly met with flak, mockery.</p>
-                                <p>Neque convallis a cras semper auctor neque vitae tempus quam. Semper auctor neque vitae tempus quam pellentesque nec nam. At lectus urna duis convallis convallis. Cras ornare arcu dui vivamus arcu. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Arcu dictum varius duis at consectetur. Eu facilisis sed odio morbi quis. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vulputate mi sit amet mauris commodo. Tristique senectus et netus et malesuada fames ac turpis. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Quam id leo in vitae turpis massa.</p>
-
-                                <p>Egestas diam in arcu cursus euismod. Ut placerat orci nulla pellentesque dignissim enim. Penatibus et magnis dis parturient. Massa tincidunt dui ut ornare lectus. Elit duis tristique sollicitudin nibh sit amet. Nisl tincidunt eget nullam non nisi est sit. Sed ullamcorper morbi tincidunt ornare massa eget. In pellentesque massa placerat duis ultricies lacus sed turpis. Orci dapibus ultrices in iaculis nunc sed augue. Pellentesque dignissim enim sit amet. Sed adipiscing diam donec adipiscing tristique. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Id nibh tortor id aliquet lectus proin.</p>
+                                <p> reference to the image and setting from which they have been carefully crafted and sold to the public.</p>
+                                <p>The most common response is loyalty. A tithe paid to these commodities as a way of no longer having to consider the wide array of options for any and all objects of desire. </p>
+                                <p>A <i>society of the spectacle</i> is asleep to the fact that its bedrock is the fragmenting economy. Classes, sub-classes, imaginary lines drawn in the sand, while the beach is eroded away. The spectacle lapping at the shores ready to washaway and redefine the landscape as per the whims of a fickle mass market.</p>
                                 </div>
                         </motion.div>
                     </div>
@@ -132,6 +131,7 @@ function Fragmenatation() {
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
                 <Link to="/commodification"><NextButton/></Link>
             </motion.div>
+            <Link to="/commodification"><NextButton/></Link>
         </div>
         </div>
     )

@@ -21,7 +21,9 @@ p {
     font-weight: 500;
     text-align: justify;
 }
-
+i {
+    font-weight: 400;
+}
 /* Heads Up Display */
 .hud {
     position: relative;
@@ -129,13 +131,13 @@ scrollbar-width: none; /* Firefox */
     -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
 }
-._noSelect {
-    // No Selection
-    -webkit-user-select: none;  
-    -moz-user-select: none;    
-    -ms-user-select: none;      
-    user-select: none;
-}
+// ._noSelect {
+//     // No Selection
+//     -webkit-user-select: none;  
+//     -moz-user-select: none;    
+//     -ms-user-select: none;      
+//     user-select: none;
+// }
 @media screen and (max-width: 900px){
     div.app {
         display: none;

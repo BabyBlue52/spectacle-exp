@@ -35,7 +35,7 @@ function CreditsPage () {
                 <div className='credit-link'>
                     
                     <img src={src} className="photo _dropShadow" alt="guy debord and the boys"/>
-                    <img src="http://www.clker.com/cliparts/B/V/P/X/Z/e/thumbtack-pushpin-2-hi.png" className='pin'/>
+                    <img src="https://episkopat.pl/wp-content/uploads/2016/07/thumb-tack-2-plain.png" className='pin'/>
                     <div className='flex author'>
                         <img className="svg" src={wiki}/>
                         <a href="https://en.wikipedia.org/wiki/Guy_Debord" target="_blank" rel="noreferrer">
@@ -53,6 +53,12 @@ function CreditsPage () {
                                 <div/>
                             </div>
                         </a>
+                    </div>
+                    <div> 
+                    <div className='flex author'>
+                        <p>Fret not my dear reader, there is a way out. Through the doom and gloom, deep meditative unplugging is the only way to stall out the spectacle’s perpetual motion machine. We can come together and love our fellow man for our commonalities and our complexities. Recognize the dignity and solidarity of a life. Recognize that human need to love and to be loved.
+                        </p>
+                    </div>
                     </div>
                 </div>
                 <div className='content-wrapper'>

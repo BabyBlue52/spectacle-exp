@@ -76,25 +76,24 @@ function Negation () {
                 <div className='text-content'>
                     <div className="blurb">
                         <motion.div className="left" variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>The spectacle is intelligent. Dissension and those who hope to destroy it are absorbed back into the fold. A revolutionary mindset or radical change are ridiculed for breaking away from the status quo.</p>
+                            <p>
+                            The media is a watchdog of the spectacle, to undermine any considerable threat. Paradigmatic shifts eventually succumb to the toxic bile and are pillaried until they become shadows of their former greatness. Movements become symbols brandied about for ideological clout and signaling progressive thinking. A strawman to simulate an true opposition, while unseen forces pull the tide of culture towards something much more simple and palatable.
+                            </p>
                         </motion.div>
                         <motion.div className="right" variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>Radicals and the rebellious spirit are negated by the spectacle. A news cycle can break the back of a movement by inundating the public with images and opinion pieces, burying attentive viewers to the point of nausea, one sees it so often it goes from shocking to banal. A death note for any recruitment effort.</p>
+                            <p>Riot attire is sold, signs are produced and manufactured and the narrative is drawn. The narrative is a double-edged sword. Uniting the angry while at the same time pigeonholing the entire movement as something that creates a sense of a unitary perspective, pledged not to deviate from the rules of the game. As soon as a protest turns violent, one no longer can them on from the sidelines and labels them as savages.</p>
                         </motion.div>
                     </div>
                 </div>
             </div>
            
             <ScrollProgress/>
-            {/* Reveal nexxt button */}
-            <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
-                <Link to="/alienation">
+        
+            <Link to="/alienation">
                     <NextButton/>
                 </Link>
-            </motion.div>
-            
              <Link to="/commodification">
                 <PrevButton/>
              </Link>

@@ -76,12 +76,12 @@ function Alienation () {
                 <div className='text-content'>
                     <div className="blurb">
                         <motion.div className="left" variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>Not just from others, but also from one’s self. What pieces of fragmented identity can be cobbled together can never exist as a complete personal mosaic. To promulgate this ostracization, the spectacle flings the pieces of psyche far from the host and drills down on the vulnerable shards. Each shard yearns for completeness, but in every direction they turn they are met with the spectacle armed to the teeth with inadequacies. </p>
+                            <p>The person is even alienated from the rewards of her labor, dissociated from other departments let alone the profits of her services rendered. An individual is self-interested, isolated from her friends, colleagues and community. Harkening back to the marxist outcry, work is losing its meaning. </p>
                         </motion.div>
                         <motion.div className="right" variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. Convallis convallis tellus id interdum velit. Nisi vitae suscipit tellus mauris a diam maecenas. Dictum varius duis at consectetur lorem. Est sit amet facilisis magna etiam tempor orci. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Placerat in egestas erat imperdiet sed euismod nisi porta. Gravida rutrum quisque non tellus orci.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>It begins to define the tempo of her life instead of her expressing herself and orchestrating the parts into a harmony.</p>
+                            <p>These communities she finds herself in are just a stack of individuals always, defined by their differences. The spectacle sees these differences and adds a layer of abstract freedom to their lives to pacify the outrage. Realizing that human desire for meaning, the spectacle parades new better alternative commodities to replace the old, but not to break rank, points to a version of the same old distraction from the economic strife required for the system to operate. </p>
                         </motion.div>
                     </div>
                 </div>
@@ -93,7 +93,9 @@ function Alienation () {
                     <NextButton/>
                 </Link>
             </motion.div>
-
+            <Link to="/homogenization">
+                    <NextButton/>
+                </Link>
              <Link to="/negation">
                 <PrevButton/>
              </Link>

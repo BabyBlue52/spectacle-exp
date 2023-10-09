@@ -85,13 +85,13 @@ function Commodification() {
                 <div className="text-content">
                     <div className="blurb row">
                         <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>Societal commodification is pervasive. Our wants, desires, socialization, and intimacy are packaged and sold to us. The spectacle has shifted from producing tangible objects to producing experiences, but these experiences are often diluted and curated, leaving us always just shy of fulfillment. </p>
                         </motion.div>
                         <motion.div variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>We are living in a world where everything is for sale, and even our most personal experiences are designed to make a profit. Dissatisfaction and emptiness follow as we are constantly bombarded with messages telling us that we need more to be happy. </p>
                         </motion.div>
                         <motion.div variants={textAnimation} animate={textReveal3 ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>Be aware the spectacle is subtle, to resist the urge to buy into the illusion of fulfillment that is being authored. One need to find ways to create meaning and purpose in life, and to connect with others in ways that are authentic and meaningful.</p>
                         </motion.div>
                     </div>
                 </div>

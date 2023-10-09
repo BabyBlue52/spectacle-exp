@@ -40,6 +40,10 @@ function Homogenization () {
             setTextReveal3(false)
             setPixelRatio(0)
         }
+        if (yRange.current > 20) {
+            setTextReveal(true)
+            setPixelRatio(4)
+        }
         if (yRange.current > 40) {
             setTextReveal(true)
             setPixelRatio(8)
@@ -84,13 +88,13 @@ function Homogenization () {
                 <div className="text-content">
                     <div className="blurb row">
                         <motion.div variants={textAnimation} animate={textReveal ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>We are all the same under the watchful eye of the spectacle. Society is ‘inclusive’ creating a model, mass-producible framework for how to live a meaningful life. Disregard all the personal idiosyncrasies that make such a life actually worth living. Own these and get the life you deserve. This society is inclusive as long as we all act the same.</p>
                         </motion.div>
                         <motion.div variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                            <p>However, as you get further down the line of mass production, you begin to abstract away what made the commodity worth replication in the beginning. It becomes meaningless, a facsimile and a simulacra of its former self. A mere sign for which its meaning is co-opted to allow you into a certain class of people who do a certain thing. </p>
                         </motion.div>
-                        <motion.div variants={textAnimation} animate={textReveal3 ? 'reveal' : 'hide'}>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id eu nisl nunc mi. In ante metus dictum at tempor commodo ullamcorper. </p>
+                        <motion.div variants={textAnimation} animate={textReveal2 ? 'reveal' : 'hide'}>
+                            <p>This is the great ideological function of the Society of the Spectacle. To reduce the complexities of ultimate human importance. The media is but the voice box, the mouthpiece to propagate these ideas, not deviously, but as a function of the system.</p>
                         </motion.div>
                     </div>
                 </div>
@@ -99,6 +103,7 @@ function Homogenization () {
             <Link to="/alienation">
                 <PrevButton/>
             </Link>
+            <Link to="/credits"><EndButton/></Link>
             <motion.div variants={textAnimation} animate={showNext ? 'reveal' : 'hide'}>
                 <Link to="/credits"><EndButton/></Link>
             </motion.div>
