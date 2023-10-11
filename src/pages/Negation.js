@@ -59,6 +59,7 @@ function Negation () {
      }
 
     return (
+        <>
         <div className='page tin'>
             <LoadingBar/>
             <CursorTracker/>        
@@ -98,7 +99,7 @@ function Negation () {
                 <PrevButton/>
              </Link>
         </div>
-        
+        </>
     )
 }
 

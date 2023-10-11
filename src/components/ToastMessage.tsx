@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React = require("react")
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ReactComponent as Hint } from "../img/hint.svg";
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React = require("react")
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 export const NextButton = () => {

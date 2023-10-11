@@ -1,5 +1,6 @@
+import React = require("react")
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import ReactPlayer from "react-player"; 
 
 export default function SpaceInvader() {

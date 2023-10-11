@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React = require("react")
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineClose, MdOutlineMenuOpen } from "react-icons/md";
 import { Link } from 'react-router-dom';

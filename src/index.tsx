@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React = require("react")
+import ReactDOM = require('react-dom/client');
 import { BrowserRouter } from 'react-router-dom';
 
 import './styles.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root')!); // ! == null check
 root.render(

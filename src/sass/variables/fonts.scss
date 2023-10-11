@@ -1,16 +1,16 @@
 // Open Sans
 @import url('https://fonts.googleapis.com/css2?family=Open+Sanswght@400;500&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/rosign');
 // Rosign Bold
-@font-face {
-    font-family: 'Rosign Bold Italic';
-    src:local('Rosign Bold Italic'), 
-        url(./RosignBoldItalic700.woff) format('woff'),
-        url(./RosignBoldItalic700.woff2) format('woff2');
-}
+// @font-face {
+//     font-family: 'Rosign Bold Italic';
+//     src:local('Rosign Bold Italic'), 
+//         url(../../sass/variables/RosignBoldItalic700.woff) format('woff'),
+//         url(../../sass/variables/RosignBoldItalic700.woff2) format('woff2');
+// }
 
 $openSans: 'Open Sans', sans-serif;
-$rosignBold: 'Rosign Bold Italic', san-serif;
+$rosignBold: 'Rosign', san-serif;
 
 $paragraph: 0.85rem;
 $subtitle: 1.4rem;

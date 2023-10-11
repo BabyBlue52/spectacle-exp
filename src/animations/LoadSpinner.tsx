@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React = require("react")
+import { useEffect, useState } from "react";
 import { BarLoader } from "react-spinners";
 import { motion } from 'framer-motion';
 

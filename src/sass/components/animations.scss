@@ -45,7 +45,10 @@ $animationSpeed: 120s;
     left: calc(50vw - 150px);
     width: 300px;
     height: 200px;
-    
+    p {
+        display: flex;
+        justify-content: center;
+    }
     .scroll-dot {
         position: absolute;
         width: 8px;

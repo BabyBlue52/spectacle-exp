@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FlipNumbers from "react-flip-numbers";
 import { useLocation } from 'react-router-dom';
+
 export default (props) => {
   const [slug, setSlug]= useState('');  
   const [chapter, setChapter] = useState('1')

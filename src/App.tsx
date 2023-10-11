@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React = require("react")
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 
 import HUD from './components/HUD';
