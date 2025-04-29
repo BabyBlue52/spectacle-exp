@@ -1,4 +1,4 @@
-import React = require("react")
+import React from "react"
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 

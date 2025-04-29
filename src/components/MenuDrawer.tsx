@@ -1,4 +1,4 @@
-import React = require("react")
+import React from "react"
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineClose, MdOutlineMenuOpen } from "react-icons/md";

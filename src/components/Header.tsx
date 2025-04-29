@@ -1,4 +1,4 @@
-import React = require("react")
+import React from "react"
 
 const Header = (props:any) => {
     if (props.pageTitle === 'Credits') {

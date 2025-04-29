@@ -3,10 +3,17 @@
       "outDir": "./dist/",
       "sourceMap": true,
       "noImplicitAny": true,
-      "module": "commonjs",
+      "module": "esnext",
+      "moduleResolution": "node",
       "allowJs": true,
       "target": "es5",
-      "jsx": "react"
+      "jsx": "react",
+      "allowSyntheticDefaultImports": true,
+      "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
   },
   "include": [
       "./src/**/*"

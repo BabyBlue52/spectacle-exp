@@ -29,7 +29,7 @@
     
     .text {
       position: relative;
-      top: 10px;
+      top: 15px;
   
       p {
         white-space: nowrap;
@@ -43,12 +43,13 @@
       }
       span {
         position: relative;
-        top: 4px;
+        top: 0px;
         padding: 0 5px;
         font-weight: bold;
         font-family: $rosignBold;
         font-size: 24px;
         letter-spacing: 2px;
+        color: $sunset;
         
       }
     }

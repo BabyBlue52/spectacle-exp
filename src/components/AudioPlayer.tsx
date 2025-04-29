@@ -1,4 +1,4 @@
-import React = require("react")
+import React from "react"
 
 import ReactPlayer from "react-player";
 import { FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
