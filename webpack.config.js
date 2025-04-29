@@ -28,6 +28,17 @@ module.exports = {
             ],
           },
           {
+            test: /\.(js|jsx)$/,
+            include: path.resolve(__dirname, 'src'),
+            exclude: /(node_modules|bower_components|build)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env', '@babel/preset-react'],
+              },
+            },
+          },
+          {
             test: /\.tsx?$/,
             use: [
                 {
@@ -37,13 +48,9 @@ module.exports = {
             include: includePaths,
             exclude: '/node_modules/'
         },
-        { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-          {
-            test: /\.(js|jsx)$/,
-            include: path.resolve(__dirname, 'src'),
-            exclude: /(node_modules|bower_components|build)/,
-            use: ['babel-loader']
-          },
+      
+
+          { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
           {
             test: /\.(gif|png|jpg|eot|woff|ttf|svg)$/,
             use: [
@@ -56,6 +63,7 @@ module.exports = {
             ],
                 include: includePaths,
             },
+         
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [{
@@ -70,7 +78,7 @@ module.exports = {
     ],
   },
   resolve: {
-      extensions: [".ts", ".tsx", ".js", ".json"]
+      extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
   },
   output: {
     filename: 'bundle.js',
